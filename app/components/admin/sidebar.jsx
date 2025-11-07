@@ -69,7 +69,7 @@ export default function Sidebar({ isCollapsed, toggleSidebar, pathname }) {
         </div>
 
         {/* ======= MENU ITEMS ======= */}
-        <div className="flex flex-col mt-7 mx-2">
+        <div className="flex flex-col mx-2 mt-7">
           <SidebarMenuItem
             isCollapsed={isCollapsed}
             text="Dashboard"
@@ -142,13 +142,13 @@ export default function Sidebar({ isCollapsed, toggleSidebar, pathname }) {
             {/* Expanded Sidebar Dropdown */}
             {!isCollapsed && truevalueOpen && (
               <div className="flex flex-col pl-4 mt-1 ml-4 space-y-1 border-l border-gray-200">
-                <SidebarMenuItem
+                {/* <SidebarMenuItem
                   isCollapsed={false}
                   text="Post a Vehicle"
                   to="/admin/truevalue/post-vehicle"
                   icon={BsPostcard}
                   active={pathname === "/admin/truevalue/post-vehicle"}
-                />
+                /> */}
                 <SidebarMenuItem
                   isCollapsed={false}
                   text="Enquiries"
@@ -169,13 +169,13 @@ export default function Sidebar({ isCollapsed, toggleSidebar, pathname }) {
             {/* Collapsed Sidebar Hover Dropdown */}
             {isCollapsed && (
               <div className="absolute top-0 z-50 hidden p-2 bg-white border border-gray-200 rounded-lg shadow-lg left-full w-52 group-hover:block">
-                <SidebarMenuItem
+                {/* <SidebarMenuItem
                   isCollapsed={false}
                   text="Post a Vehicle"
                   to="/admin/truevalue/post-vehicle"
                   icon={BsPostcard}
                   active={pathname === "/admin/truevalue/post-vehicle"}
-                />
+                /> */}
                 <SidebarMenuItem
                   isCollapsed={false}
                   text="Enquiries"
