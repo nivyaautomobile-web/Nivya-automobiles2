@@ -40,14 +40,12 @@ export default function PostVehicle() {
   const fileInputRef = useRef(null);
   const dropRef = useRef(null);
 
-  /** 🔐 ImageKit Auth */
   const authenticator = async () => {
     const res = await fetch("/api/upload-auth");
     if (!res.ok) throw new Error("Failed to get ImageKit auth");
     return res.json();
   };
 
-  /** Dropdown Options */
   const options = {
     color: ["White", "Black", "Silver", "Gray", "Blue", "Red", "Brown"],
     brand: ["Hyundai", "Maruti Suzuki", "Tata", "Mahindra", "Kia", "Toyota"],
@@ -62,7 +60,6 @@ export default function PostVehicle() {
     ],
   };
 
-  /** Toggle features */
   const toggleFeature = (feature) =>
     setForm((prev) => ({
       ...prev,
@@ -71,14 +68,12 @@ export default function PostVehicle() {
         : [...prev.features, feature],
     }));
 
-  /** Handle file selection */
   const handleFileInput = (e) => {
     const files = Array.from(e.target.files || []);
     uploadMultipleFiles(files);
-    e.target.value = null; // reset input
+    e.target.value = null;
   };
 
-  /** Drag-and-drop setup */
   useEffect(() => {
     const el = dropRef.current;
     if (!el) return;
@@ -109,7 +104,6 @@ export default function PostVehicle() {
     };
   }, []);
 
-  /** Upload files to ImageKit */
   const uploadMultipleFiles = async (files) => {
     if (!files.length) return;
     const remaining = MAX_IMAGES - form.images.length;
@@ -119,7 +113,6 @@ export default function PostVehicle() {
       const id = crypto.randomUUID();
       const localUrl = URL.createObjectURL(file);
 
-      // add temporary placeholder
       setForm((prev) => ({
         ...prev,
         images: [
@@ -149,7 +142,6 @@ export default function PostVehicle() {
           },
         });
 
-        // Replace placeholder with final uploaded data
         setForm((prev) => {
           const images = prev.images.map((img) =>
             img.id === id
@@ -176,7 +168,6 @@ export default function PostVehicle() {
     }
   };
 
-  /** Remove image */
   const removeImage = (id) => {
     setForm((prev) => {
       const images = prev.images.filter((i) => i.id !== id);
@@ -186,7 +177,6 @@ export default function PostVehicle() {
     });
   };
 
-  /** Set primary image */
   const setPrimary = (id) =>
     setForm((prev) => ({
       ...prev,
@@ -196,13 +186,11 @@ export default function PostVehicle() {
       })),
     }));
 
-  /** Handle input change */
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  /** Reset form */
   const resetForm = () => {
     setForm({
       brand: "",
@@ -224,15 +212,12 @@ export default function PostVehicle() {
     setMessage("");
   };
 
-  /** Submit (publish or draft) */
   const handleSubmit = async (e, isDraft = false) => {
     e.preventDefault();
     if (loading) return;
 
     setLoading(true);
     setMessage("Uploading vehicle...");
-
-    console.log(form);
 
     try {
       const payload = {
@@ -269,14 +254,14 @@ export default function PostVehicle() {
   };
 
   return (
-    <div className="min-h-screen p-6 m-2 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl">
+    <div className="min-h-screen p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl">
       <Head>
         <title>Post Vehicle</title>
       </Head>
 
       <main className="container mx-auto">
         <header className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
             Post Your Vehicle for Sale
           </h1>
           <p className="mt-1 text-sm text-gray-500">
@@ -290,8 +275,8 @@ export default function PostVehicle() {
           autoComplete="off"
         >
           {/* Vehicle Info */}
-          <section className="gap-6 p-6 bg-white shadow-sm rounded-2xl">
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <section className="p-4 bg-white shadow-sm sm:p-6 rounded-2xl">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
               <SelectInput
                 label="Body Type"
                 name="bodyType"
@@ -383,28 +368,20 @@ export default function PostVehicle() {
           </section>
 
           {/* Upload & Features */}
-          <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {/* Upload */}
-            <div className="p-6 bg-white shadow-sm rounded-2xl">
-              <h3 className="mb-3 font-semibold text-gray-700">
+          <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <div className="p-4 bg-white shadow-sm sm:p-6 rounded-2xl">
+              <h3 className="mb-3 text-base font-semibold text-gray-700 sm:text-lg">
                 Upload Images
               </h3>
 
               <div
                 ref={dropRef}
                 onClick={() => fileInputRef.current?.click()}
-                className="flex flex-col items-center justify-center p-6 mb-4 transition border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+                className="flex flex-col items-center justify-center p-6 mb-4 text-center transition border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
               >
-                <LuImagePlus className="h-7 w-7" />
-
-                {/* <Image
-                  src="/upload-icon.svg"
-                  alt="upload"
-                  width={48}
-                  height={48}
-                /> */}
+                <LuImagePlus className="text-gray-500 h-7 w-7" />
                 <p className="mt-2 text-sm text-gray-500">
-                  Drag & Drop or Click to Upload
+                  Tap or Drag & Drop to Upload Images
                 </p>
                 <input
                   ref={fileInputRef}
@@ -422,13 +399,13 @@ export default function PostVehicle() {
                 setPrimary={setPrimary}
               />
 
-              <div className="flex items-center justify-between mt-4">
-                <div className="flex gap-3">
+              <div className="flex flex-col items-center justify-between gap-3 mt-4 sm:flex-row">
+                <div className="flex flex-wrap justify-center w-full gap-3 sm:w-auto sm:justify-start">
                   <button
                     type="button"
                     onClick={(e) => handleSubmit(e, false)}
                     disabled={loading}
-                    className="px-6 py-2 font-medium text-white rounded-lg shadow-md bg-gradient-to-r from-blue-600 to-indigo-500 hover:opacity-95 disabled:opacity-50"
+                    className="px-6 py-2 text-sm font-medium text-white rounded-lg shadow-md sm:text-base bg-gradient-to-r from-blue-600 to-indigo-500 hover:opacity-95 disabled:opacity-50"
                   >
                     {loading ? "Posting..." : "Post Listing"}
                   </button>
@@ -437,7 +414,7 @@ export default function PostVehicle() {
                     type="button"
                     onClick={(e) => handleSubmit(e, true)}
                     disabled={loading}
-                    className="px-5 py-2 font-medium text-blue-600 bg-white border border-blue-200 rounded-lg shadow-sm hover:bg-blue-50 disabled:opacity-50"
+                    className="px-6 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-200 rounded-lg shadow-sm sm:text-base hover:bg-blue-50 disabled:opacity-50"
                   >
                     {loading ? "Saving..." : "Save as Draft"}
                   </button>
@@ -445,20 +422,19 @@ export default function PostVehicle() {
                   <button
                     type="button"
                     onClick={resetForm}
-                    className="text-gray-600 hover:underline"
+                    className="text-sm text-gray-600 hover:underline"
                   >
                     Reset
                   </button>
                 </div>
 
-                <span className="text-sm text-gray-500">
+                <span className="text-xs text-gray-500 sm:text-sm">
                   Images: {form.images.length}/{MAX_IMAGES}
                 </span>
               </div>
             </div>
 
-            {/* Features */}
-            <aside className="p-6 bg-white shadow-sm rounded-2xl">
+            <aside className="p-4 bg-white shadow-sm sm:p-6 rounded-2xl">
               <h3 className="mb-4 font-semibold text-gray-700">
                 Accessories & Features
               </h3>
@@ -468,7 +444,11 @@ export default function PostVehicle() {
                   return (
                     <label
                       key={f}
-                      className={`flex items-center px-3 py-2 rounded-lg border cursor-pointer transition bg-white text-gray-700 border-gray-300 hover:bg-gray-50 `}
+                      className={`flex items-center px-3 py-2 rounded-lg border cursor-pointer transition text-sm ${
+                        isSelected
+                          ? "bg-blue-50 border-blue-400 text-blue-700"
+                          : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+                      }`}
                     >
                       <input
                         type="checkbox"
@@ -497,7 +477,7 @@ export default function PostVehicle() {
           </section>
 
           {message && (
-            <div className="p-3 text-sm text-white bg-blue-600 rounded">
+            <div className="p-3 text-sm text-center text-white bg-blue-600 rounded-lg">
               {message}
             </div>
           )}
@@ -507,13 +487,13 @@ export default function PostVehicle() {
   );
 }
 
-/** --- Small Input Components --- */
+/** Inputs **/
 const TextInput = ({ label, ...props }) => (
   <label className="flex flex-col">
     <span className="text-sm font-medium text-gray-600">{label}</span>
     <input
       {...props}
-      className="p-3 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-200"
+      className="p-3 mt-2 text-sm border rounded-lg focus:ring-2 focus:ring-blue-200"
     />
   </label>
 );
@@ -523,7 +503,7 @@ const SelectInput = ({ label, options, ...props }) => (
     <span className="text-sm font-medium text-gray-600">{label}</span>
     <select
       {...props}
-      className="p-3 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-200"
+      className="p-3 mt-2 text-sm border rounded-lg focus:ring-2 focus:ring-blue-200"
     >
       <option value="">Select {label}</option>
       {options.map((opt) => (
@@ -536,9 +516,9 @@ const SelectInput = ({ label, options, ...props }) => (
 );
 
 const ImageGrid = ({ images, removeImage, setPrimary }) => (
-  <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
+  <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
     {images.length === 0 ? (
-      <div className="col-span-3 p-6 text-sm text-gray-400 border rounded-lg">
+      <div className="p-6 text-sm text-center text-gray-400 border rounded-lg col-span-full">
         No images uploaded yet.
       </div>
     ) : (
@@ -552,7 +532,7 @@ const ImageGrid = ({ images, removeImage, setPrimary }) => (
           <img
             src={img.url || img.localUrl}
             alt={img.name}
-            className="object-cover w-full h-28"
+            className="object-cover w-full h-28 sm:h-32"
           />
           {img.uploading && (
             <div className="absolute inset-0 flex items-center justify-center text-xs text-gray-700 bg-white/70">
@@ -565,7 +545,7 @@ const ImageGrid = ({ images, removeImage, setPrimary }) => (
           >
             ×
           </button>
-          <div className="flex items-center justify-between px-2 py-1 text-xs bg-white/80">
+          <div className="flex items-center justify-between px-2 py-1 text-xs bg-white/90">
             <button
               onClick={() => setPrimary(img.id)}
               className={`px-2 py-1 rounded ${

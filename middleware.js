@@ -1,26 +1,26 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
 export function middleware(request) {
-  const adminAuth = request.cookies.get("adminAuth")?.value;
-  const { pathname } = request.nextUrl;
+  const adminAuth = request.cookies.get('adminAuth')?.value;
 
-  const isAdminPage = pathname.startsWith("/admin");
-  const isAdminAPI = pathname.startsWith("/api/admin");
-  const isLoginPage = pathname === "/admin/login";
+  // ✅ Protect all /admin routes except /admin/login
+  const isAdminRoute = request.nextUrl.pathname.startsWith('/admin');
+  const isLoginPage = request.nextUrl.pathname === '/admin/login';
 
-  // 🔒 Protect all /admin and /api/admin routes (except /admin/login)
-  if ((isAdminPage || isAdminAPI) && !isLoginPage && !adminAuth) {
-    return NextResponse.redirect(new URL("/admin/login", request.url));
+  if (isAdminRoute && !isLoginPage && !adminAuth) {
+    // Redirect to login page if not authenticated
+    return NextResponse.redirect(new URL('/admin/login', request.url));
   }
 
-  // ✅ Prevent logged-in admins from revisiting login page
+  // If authenticated user tries to visit login page, redirect to dashboard
   if (isLoginPage && adminAuth) {
-    return NextResponse.redirect(new URL("/admin/dashboard", request.url));
+    return NextResponse.redirect(new URL('/admin/dashboard', request.url));
   }
 
   return NextResponse.next();
 }
 
+// ✅ Apply middleware only to /admin routes
 export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"], // ✅ protect both
+  matcher: ['/admin/:path*'],
 };
