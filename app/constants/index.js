@@ -1497,3 +1497,79 @@ export const vehicles = {
       'Eeco, Maruti Suzuki Eeco 2025, Eeco price, Eeco mileage, Eeco variants, Eeco features, Eeco on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
 };
+
+
+
+ export const cars = [
+  {
+    name: 'VICTORIS',
+    image: 'https://www.skyautomobiles.in/thumbnail/victoris.png',
+    price: '₹ 10.50 L*/-',
+    brochure:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/victoris/brochure/Maruti-Suzuki-Arena-Victoris-Brochure.pdf',
+    link: '/vehicles/victoris',
+  },
+  {
+    name: 'ALTO K10',
+    image: 'https://www.skyautomobiles.in/thumbnail/altoK10.webp',
+    price: '₹ 5.78 L* /-',
+    brochure: '#',
+    link: '/vehicles/alto-k10',
+  },
+  {
+    name: 'SWIFT',
+    image: 'https://www.skyautomobiles.in/thumbnail/swift02.webp',
+    price: '₹ 3.69 L* /-',
+    brochure: '#',
+    link: '/vehicles/swift',
+  },
+  {
+    name: 'BREZZA',
+    image: 'https://www.skyautomobiles.in/thumbnail/brezza-page.webp',
+    price: '₹ 8.25 L* /-',
+    brochure: '#',
+    link: '/vehicles/brezza',
+  },
+  {
+    name: 'DZIRE',
+    image: 'https://www.skyautomobiles.in/thumbnail/bluishblack.png',
+    price: '₹ 6.25 L* /-',
+    brochure: '#',
+    link: '/vehicles/dzire',
+  },
+  {
+    name: 'S-PRESSO',
+    image: 'https://www.skyautomobiles.in/thumbnail/spresso.webp',
+    price: '₹ 3.49* /-',
+    brochure: '#',
+    link: '/vehicles/spresso',
+  },
+  {
+    name: 'WAGONR',
+    image: 'https://www.skyautomobiles.in/thumbnail/wagnor.webp',
+    price: '₹ 4.98* /-',
+    brochure: '#',
+    link: '/vehicles/wagonr',
+  },
+  {
+    name: 'ERTIGA',
+    image: 'https://www.skyautomobiles.in/thumbnail/ertiga.webp',
+    price: '₹ 8.80* /-',
+    brochure: '#',
+    link: '/vehicles/ertiga',
+  },
+  {
+    name: 'CELERIO',
+    image: 'https://www.skyautomobiles.in/thumbnail/celerio.webp',
+    price: '₹ 4.69* /-',
+    brochure: '#',
+    link: '/vehicles/celerio',
+  },
+  {
+    name: 'EECO',
+    image: 'https://www.skyautomobiles.in/thumbnail/Eeco.webp',
+    price: '₹ 5.20* /-',
+    brochure: '#',
+    link: '/vehicles/eeco',
+  },
+];

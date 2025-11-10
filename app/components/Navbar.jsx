@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { FaCaretRight } from 'react-icons/fa';
 import { MdOutlineArrowDropDown } from 'react-icons/md';
-
+import { cars } from '../constants';
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // vehicles, services, truevalue, more
@@ -51,58 +51,11 @@ export default function Navbar() {
 
   // --- Data ---
 
-  const models = [
-    {
-      subName: 'VICTORIS',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/victoris.png',
-      link: '/vehicles/victoris',
-    },
-    {
-      subName: 'ALTO K10',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/altoK10.webp',
-      link: '/vehicles/alto-k10',
-    },
-    {
-      subName: 'SWIFT',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/swift02.webp',
-      link: '/vehicles/swift',
-    },
-    {
-      subName: 'BREZZA',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/brezza-page.webp',
-      link: '/vehicles/brezza',
-    },
-    {
-      subName: 'DZIRE',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/bluishblack.png',
-      link: '/vehicles/dzire',
-    },
-    {
-      subName: 'S-PRESSO',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/spresso.webp',
-      link: '/vehicles/spresso',
-    },
-    {
-      subName: 'WAGONR',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/wagnor.webp',
-      link: '/vehicles/wagonr',
-    },
-    {
-      subName: 'ERTIGA',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/ertiga.webp',
-      link: '/vehicles/ertiga',
-    },
-    {
-      subName: 'CELERIO',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/celerio.webp',
-      link: '/vehicles/celerio',
-    },
-    {
-      subName: 'EECO',
-      thumbnail: 'https://www.skyautomobiles.in/thumbnail/Eeco.webp',
-      link: '/vehicles/eeco',
-    },
-  ];
+  const models = cars.map((car) => ({
+    subName: car.name,
+    thumbnail: car.image,
+    link: car.link,
+  }));
 
   const navLinks = [
     { name: 'Vehicles', key: 'vehicles', hasMegaMenu: true },
