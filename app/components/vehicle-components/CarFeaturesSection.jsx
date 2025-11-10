@@ -630,7 +630,8 @@ const featureData = {
       },
 
       {
-        title: 'SmartPlay Pro+ infotainment System with Surround Sense by ARKAMYS™',
+        title:
+          'SmartPlay Pro+ infotainment System with Surround Sense by ARKAMYS™',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Dzire/Interior/Infotainment_desk.avif?updatedAt=1762416537716',
         description:
@@ -640,25 +641,29 @@ const featureData = {
         title: 'Automatic Climate Control',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Dzire/Interior/Climate_control_desk.avif?updatedAt=1762416537714',
-        description: ' Wraps you in comfort, adjusting effortlessly to keep your drive as smooth as your success.',
+        description:
+          ' Wraps you in comfort, adjusting effortlessly to keep your drive as smooth as your success.',
       },
       {
         title: 'Wireless Charger',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Dzire/Interior/wireless_charger_desk.avif?updatedAt=1762416537687',
-        description: ' Keeps your devices powered and your space clutter-free, so you can stay connected on the go.',
+        description:
+          ' Keeps your devices powered and your space clutter-free, so you can stay connected on the go.',
       },
       {
         title: 'Rear AC Vents',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Dzire/Interior/Rear_ac_vent_desk.avif?updatedAt=1762416537712',
-        description: ' Personalise your comfort, front to back — with faster cooling and consistent airflow throughout the cabin.',
+        description:
+          ' Personalise your comfort, front to back — with faster cooling and consistent airflow throughout the cabin.',
       },
       {
         title: 'Dual-Tone Sophisticated Interiors',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Dzire/Interior/cabin_space_desk.avif?updatedAt=1762416537717',
-        description: 'Transforms your cabin into a perfect blend of style and elegance, elevating your driving experience.',
+        description:
+          'Transforms your cabin into a perfect blend of style and elegance, elevating your driving experience.',
       },
     ],
   },

@@ -120,6 +120,12 @@ export const vehicles = {
         },
       ],
     },
+    metaTitle:
+      'Maruti Suzuki Alto K10 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Explore the all-new Maruti Suzuki Alto K10 2025 at Nivya Automobiles. Check the latest on-road price, mileage, specifications, colors, and features. Book a test drive or get exciting offers today!',
+    metaKeywords:
+      'Alto K10, Maruti Suzuki Alto K10 2025, Alto K10 price, Alto K10 mileage, Alto K10 variants, Alto K10 features, Alto K10 on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   victoris: {
     name: 'Maruti VICTORIS',
@@ -439,6 +445,12 @@ export const vehicles = {
         },
       ],
     },
+    metaTitle:
+      'Maruti Suzuki Victoris 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Discover the bold and powerful Maruti Suzuki Victoris 2025 at Nivya Automobiles. Explore its on-road price, mileage, specifications, variants, and smart features. Book a test drive or get exciting offers today!',
+    metaKeywords:
+      'Maruti Suzuki Victoris 2025, Victoris price, Victoris mileage, Victoris variants, Victoris features, Victoris on-road price, Maruti Victoris SUV, Maruti Brezza, Nivya Automobiles, Maruti showroom Anantapur',
   },
   swift: {
     name: 'Maruti Swift',
@@ -584,6 +596,12 @@ export const vehicles = {
         },
       ],
     },
+    metaTitle:
+      'Maruti Suzuki Swift 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Explore the dynamic Maruti Suzuki Swift 2025 at Nivya Automobiles. Check the latest on-road price, sporty design, powerful performance, and available variants. Book a test drive now!',
+    metaKeywords:
+      'Swift, Maruti Suzuki Swift 2025, Swift price, Swift mileage, Swift variants, Swift features, Swift on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   brezza: {
     name: 'Maruti Brezza',
@@ -742,6 +760,12 @@ export const vehicles = {
         price: '₹ 11,30,899 Lakh',
       },
     ],
+    metaTitle:
+      'Maruti Suzuki Brezza 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Explore the bold and powerful Maruti Suzuki Brezza 2025 at Nivya Automobiles. Learn about prices, mileage, performance, and safety features. Visit our showroom today!',
+    metaKeywords:
+      'Brezza, Maruti Suzuki Brezza 2025, Brezza price, Brezza mileage, Brezza variants, Brezza features, Brezza on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   dzire: {
     name: 'Maruti Dzire',
@@ -840,6 +864,13 @@ export const vehicles = {
       { id: 8, name: 'VXi CNG', type: 'Manual', price: '₹ 8,03,100 Lakh' },
       { id: 9, name: 'ZXi CNG', type: 'Manual', price: '₹ 9,03,700 Lakh' },
     ],
+
+    metaTitle:
+      'Maruti Suzuki Dzire 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Discover elegance and comfort with the Maruti Suzuki Dzire 2025 at Nivya Automobiles. Explore its on-road price, variants, mileage, and advanced features. Test drive available!',
+    metaKeywords:
+      'Dzire, Maruti Suzuki Dzire 2025, Dzire price, Dzire mileage, Dzire variants, Dzire features, Dzire on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   spresso: {
     name: 'Maruti S-Presso',
@@ -947,6 +978,12 @@ export const vehicles = {
         price: '₹ 5,24,900 Lakh',
       },
     ],
+    metaTitle:
+      'Maruti Suzuki S-Presso 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Discover the sporty and compact Maruti Suzuki S-Presso 2025 at Nivya Automobiles. View on-road prices, mileage, specifications, and features. Book your test drive today!',
+    metaKeywords:
+      'S-Presso, Maruti Suzuki S-Presso 2025, S-Presso price, S-Presso mileage, S-Presso variants, S-Presso features, S-Presso on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   wagonr: {
     name: 'Maruti WagonR',
@@ -1085,6 +1122,12 @@ export const vehicles = {
         price: '₹ 5,88,900 Lakh',
       },
     ],
+    metaTitle:
+      'Maruti Suzuki WagonR 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Experience the tallboy comfort of the Maruti Suzuki WagonR 2025 at Nivya Automobiles. Explore price, mileage, engine options, colors, and features. Visit our showroom or book a test drive today!',
+    metaKeywords:
+      'WagonR, Maruti Suzuki WagonR 2025, WagonR price, WagonR mileage, WagonR variants, WagonR features, WagonR on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   ertiga: {
     name: 'Maruti Ertiga',
@@ -1199,6 +1242,12 @@ export const vehicles = {
       },
       { id: 12, name: 'Tour M CNG', type: 'Manual', price: '₹ 10,73,400 Lakh' },
     ],
+    metaTitle:
+      'Maruti Suzuki Ertiga 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Meet the stylish and spacious Maruti Suzuki Ertiga 2025 at Nivya Automobiles. Check on-road prices, features, seating capacity, and offers today!',
+    metaKeywords:
+      'Ertiga, Maruti Suzuki Ertiga 2025, Ertiga price, Ertiga mileage, Ertiga variants, Ertiga features, Ertiga on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   celerio: {
     name: 'Maruti Celerio',
@@ -1296,6 +1345,12 @@ export const vehicles = {
       { id: 7, name: 'ZXI+ AGS', type: 'Automatic', price: '₹ 6,72,900 Lakh' },
       { id: 8, name: 'VXI CNG', type: 'Manual', price: '₹ 5,97,900 Lakh' },
     ],
+    metaTitle:
+      'Maruti Suzuki Celerio 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Check out the stylish and fuel-efficient Maruti Suzuki Celerio 2025 at Nivya Automobiles. Learn about on-road prices, mileage, variants, and smart features. Book your Celerio today!',
+    metaKeywords:
+      'Celerio, Maruti Suzuki Celerio 2025, Celerio price, Celerio mileage, Celerio variants, Celerio features, Celerio on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
   eeco: {
     name: 'Maruti Eeco',
@@ -1308,41 +1363,40 @@ export const vehicles = {
     image: 'https://www.saboomaruti.in/images/alto-k10.png',
     colors: [
       {
-        id:0,
+        id: 0,
         name: 'Bluish Black',
         hex: '#141414',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Eeco/Colors/bluish_black-removebg-preview-min.png?updatedAt=1762416003912',
       },
       {
-        id:1,
+        id: 1,
         name: 'Metallic Glistening Grey',
         hex: '#4A4A4A',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Eeco/Colors/metallic_glisting_grey-removebg-preview-min.png?updatedAt=1762416003841',
       },
       {
-        id:2,
+        id: 2,
         name: 'Solid White',
         hex: '#B7B7B7',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Eeco/Colors/solid_white-removebg-preview-min.png?updatedAt=1762416003996',
       },
-       {
-        id:3,
+      {
+        id: 3,
         name: 'Metallic Brisk Blue',
         hex: '#0D6DC3',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Eeco/Colors/metallic_brisk_blue-removebg-preview-min.png?updatedAt=1762416003920',
       },
       {
-        id:4,
+        id: 4,
         name: 'Metallic Silky Silver',
         hex: '#737373',
         image:
           'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Eeco/Colors/metallic_silky_silver-removebg-preview-min.png?updatedAt=1762416003892',
       },
-      
     ],
     features: {
       Exterior: [
@@ -1435,5 +1489,11 @@ export const vehicles = {
         price: '₹ 8,01,500 Lakh',
       },
     ],
+    metaTitle:
+      'Maruti Suzuki Eeco 2025 – Price, Mileage, Features & On-Road Offers',
+    metaDescription:
+      'Explore the practical and versatile Maruti Suzuki Eeco 2025 at Nivya Automobiles. Discover its price, seating options, cargo space, and safety features. Book your Eeco today!',
+    metaKeywords:
+      'Eeco, Maruti Suzuki Eeco 2025, Eeco price, Eeco mileage, Eeco variants, Eeco features, Eeco on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
 };

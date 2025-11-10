@@ -1,9 +1,10 @@
 import VehiclePageClient from './VehiclePageClient';
 import { vehicles } from '@/app/constants';
 
-// This function runs on the server
+// ✅ Fix: Await params before using it
 export async function generateMetadata({ params }) {
-  const vehicle = vehicles[params.id];
+  const resolvedParams = await params;
+  const vehicle = vehicles[resolvedParams.id];
 
   if (!vehicle) {
     return {
@@ -13,12 +14,13 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${vehicle.name} | Nivya Automobiles`,
-    description: `Explore ${vehicle.name}, ${vehicle.type} with ${vehicle.fuel} engine, starting at ₹${vehicle.price}.`,
+    title: `${vehicle.metaTitle} | Nivya Automobiles`,
+    description: ` ${vehicle.metaDescription}`,
+    keywords: `${vehicle.metaKeywords}`,
     openGraph: {
       title: `${vehicle.name} | Nivya Automobiles`,
       description: `Check out the features, variants, and pricing of ${vehicle.name}.`,
-      url: `https://www.nivyaautomobiles.com/vehicles/${params.id}`,
+      url: `https://www.nivyaautomobiles.com/vehicles/${resolvedParams.id}`,
       images: [
         {
           url:
@@ -34,6 +36,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function VehiclePage({ params }) {
-  return <VehiclePageClient vehicleId={params.id} />;
+// ✅ The page itself (client-rendered section)
+export default async function VehiclePage({ params }) {
+  const resolvedParams = await params;
+  return <VehiclePageClient vehicleId={resolvedParams.id} />;
 }

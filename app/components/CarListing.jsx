@@ -11,7 +11,7 @@ const cars = [
     name: 'VICTORIS',
     image: 'https://www.skyautomobiles.in/thumbnail/victoris.png',
     logo: 'https://www.varunmaruti.com/uploads/products/pro_1614579022Dzire1.jpg',
-    price: '₹ 10.50 L /-',
+    price: '₹ 10.50 L*/-',
     brochure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/victoris/brochure/Maruti-Suzuki-Arena-Victoris-Brochure.pdf',
     link: '/vehicles/victoris',
@@ -36,7 +36,7 @@ const cars = [
     name: 'BREZZA',
     image: 'https://www.skyautomobiles.in/thumbnail/brezza-page.webp',
     logo: 'https://www.varunmaruti.com/uploads/products/pro_1614579022Dzire1.jpg',
-    price: '₹ 8.25 L /-',
+    price: '₹ 8.25 L* /-',
     brochure: '#',
     link: '/vehicles/brezza',
   },
