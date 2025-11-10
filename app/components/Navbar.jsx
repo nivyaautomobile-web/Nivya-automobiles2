@@ -54,52 +54,52 @@ export default function Navbar() {
   const models = [
     {
       subName: 'VICTORIS',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/victoris-min.png?updatedAt=1762775120494',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/victoris.png',
       link: '/vehicles/victoris',
     },
     {
       subName: 'ALTO K10',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/altoK10.webp?updatedAt=1762775002768',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/altoK10.webp',
       link: '/vehicles/alto-k10',
     },
     {
       subName: 'SWIFT',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/swift02.webp?updatedAt=1762775002755',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/swift02.webp',
       link: '/vehicles/swift',
     },
     {
       subName: 'BREZZA',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/brezza-page.webp?updatedAt=1762775002774',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/brezza-page.webp',
       link: '/vehicles/brezza',
     },
     {
       subName: 'DZIRE',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/dzire.png?updatedAt=1762775522682',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/bluishblack.png',
       link: '/vehicles/dzire',
     },
     {
       subName: 'S-PRESSO',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/spresso.webp?updatedAt=1762775002873',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/spresso.webp',
       link: '/vehicles/spresso',
     },
     {
       subName: 'WAGONR',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/wagnor.webp?updatedAt=1762775002796',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/wagnor.webp',
       link: '/vehicles/wagonr',
     },
     {
       subName: 'ERTIGA',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/ertiga.webp?updatedAt=1762775002557',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/ertiga.webp',
       link: '/vehicles/ertiga',
     },
     {
       subName: 'CELERIO',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/celerio.webp?updatedAt=1762775002547',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/celerio.webp',
       link: '/vehicles/celerio',
     },
     {
       subName: 'EECO',
-      thumbnail: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/Eeco.webp?updatedAt=1762775002541',
+      thumbnail: 'https://www.skyautomobiles.in/thumbnail/Eeco.webp',
       link: '/vehicles/eeco',
     },
   ];
