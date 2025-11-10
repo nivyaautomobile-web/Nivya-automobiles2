@@ -29,42 +29,65 @@ export default function Contact() {
 
         {/* Contact Info Section */}
         <section className='bg-[#E9F0FF] py-16'>
-          <div className='grid grid-cols-1 gap-6 px-6 mx-auto text-center max-w-7xl sm:grid-cols-2 lg:grid-cols-4'>
-            <div className='py-8 bg-white shadow-md rounded-2xl'>
-              <FaMapMarkerAlt className='mx-auto mb-3 text-3xl text-[#b97200]' />
-              <h3 className='font-semibold text-gray-800'>Location</h3>
-              <p className='mt-2 text-gray-500'>
-                Sunshine Business Park
-                <br />
-                Sector 01, Poland
-              </p>
-            </div>
-            <div className='py-8 bg-white shadow-md rounded-2xl'>
-              <FaPhoneAlt className='mx-auto mb-3 text-3xl text-[#b97200]' />
-              <h3 className='font-semibold text-gray-800'>Contact</h3>
-              <p className='mt-2 text-gray-500'>
-                +4890 356 555
-                <br />
-                +4890 356 666
-              </p>
-            </div>
-            <div className='py-8 bg-white shadow-md rounded-2xl'>
-              <FaEnvelope className='mx-auto mb-3 text-3xl text-[#b97200]' />
-              <h3 className='font-semibold text-gray-800'>Email</h3>
-              <p className='mt-2 text-gray-500'>
-                Techbiz@example.com
-                <br />
-                gmail@example.com
-              </p>
-            </div>
-            <div className='py-8 bg-white shadow-md rounded-2xl'>
-              <FaClock className='mx-auto mb-3 text-3xl text-[#b97200]' />
-              <h3 className='font-semibold text-gray-800'>Visit Between</h3>
-              <p className='mt-2 text-gray-500'>
-                Mon–Sat: 9:00–5:00
-                <br />
-                Sunday: Closed
-              </p>
+          <div className='px-6 mx-auto text-center max-w-7xl'>
+            <h2 className='mb-10 text-3xl font-bold text-gray-800'>
+              Get in Touch with Us
+            </h2>
+
+            <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4'>
+              {/* Location */}
+              <div className='flex flex-col items-center justify-center p-8 transition bg-white shadow-md rounded-2xl hover:shadow-lg'>
+                <FaMapMarkerAlt className='mb-4 text-4xl text-[#b97200]' />
+                <h3 className='text-lg font-semibold text-gray-800'>
+                  Location
+                </h3>
+                <p className='mt-2 leading-relaxed text-gray-500'>
+                  Maruti Suzuki ARENA
+                  <br />
+                  (Nivya Automobiles, Anantapur, Shilparamam)
+                </p>
+              </div>
+
+              {/* Contact */}
+              <div className='flex flex-col items-center justify-center p-8 transition bg-white shadow-md rounded-2xl hover:shadow-lg'>
+                <FaPhoneAlt className='mb-4 text-4xl text-[#b97200]' />
+                <h3 className='text-lg font-semibold text-gray-800'>Contact</h3>
+                <p className='mt-2 text-gray-500'>
+                  <a
+                    href='tel:9977499499'
+                    className='font-medium transition hover:text-blue-600'
+                  >
+                    9977499499
+                  </a>
+                </p>
+              </div>
+
+              {/* Email */}
+              <div className='flex flex-col items-center justify-center p-8 transition bg-white shadow-md rounded-2xl hover:shadow-lg'>
+                <FaEnvelope className='mb-4 text-4xl text-[#b97200]' />
+                <h3 className='text-lg font-semibold text-gray-800'>Email</h3>
+                <p className='mt-2 text-gray-500'>
+                  <a
+                    href='mailto:nivyaautomobile@gmail.com'
+                    className='font-medium transition hover:text-blue-600'
+                  >
+                    nivyaautomobile@gmail.com
+                  </a>
+                </p>
+              </div>
+
+              {/* Timing */}
+              <div className='flex flex-col items-center justify-center p-8 transition bg-white shadow-md rounded-2xl hover:shadow-lg'>
+                <FaClock className='mb-4 text-4xl text-[#b97200]' />
+                <h3 className='text-lg font-semibold text-gray-800'>
+                  Visit Between
+                </h3>
+                <p className='mt-2 leading-relaxed text-gray-500'>
+                  Mon–Sat: 9:00 AM – 5:00 PM
+                  <br />
+                  Sunday: Closed
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -74,15 +97,14 @@ export default function Contact() {
           <div className='grid grid-cols-1 gap-10 px-6 mx-auto max-w-7xl lg:grid-cols-2'>
             <ContactForm />
 
-            <div className='overflow-hidden shadow-md rounded-2xl'>
+            <div className='w-full h-[450px] overflow-hidden rounded-2xl shadow-md'>
               <iframe
-                title='Google Map'
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.847345213495!2d-74.00601548459348!3d40.71277597933033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjIuMCJX!5e0!3m2!1sen!2sus!4v1625154561780!5m2!1sen!2sus'
-                width='100%'
-                height='450'
-                style={{ border: 0 }}
-                allowFullScreen=''
+                title='Nivya Automobiles - Maruti Suzuki ARENA Anantapur'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.949012928539!2d77.5992824!3d14.7131694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb6b5005fa23e0f%3A0x82f61324536d3575!2sMaruti%20Suzuki%20ARENA%20(Nivya%20Automobiles%2C%20Anantapur%2C%20Shilparamam)!5e0!3m2!1sen!2sin!4v1731225600000!5m2!1sen!2sin'
+                className='w-full h-full border-0'
+                allowFullScreen
                 loading='lazy'
+                referrerPolicy='no-referrer-when-downgrade'
               ></iframe>
             </div>
           </div>
