@@ -1,5 +1,5 @@
-// API route: /api/admin/truevalue/[id]
-// Admin-only
+// ✅ API route: /api/admin/truevalue/[id]
+// Admin-only — Handles GET, PUT, DELETE for individual vehicles
 
 import { NextResponse } from "next/server";
 import Rajesh from "@/lib/models/trueSchema";
@@ -103,7 +103,11 @@ export const PUT = async (req, { params }) => {
     });
 
     return NextResponse.json(
-      { success: true, message: "Vehicle updated successfully", data: updatedVehicle },
+      {
+        success: true,
+        message: "Vehicle updated successfully",
+        data: updatedVehicle,
+      },
       { status: 200 }
     );
   } catch (error) {
@@ -135,23 +139,33 @@ export const DELETE = async (req, { params }) => {
       );
     }
 
-    // Delete all images from ImageKit
+    // ✅ Construct base URL safely (for Vercel)
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL?.startsWith("http")
+        ? process.env.NEXT_PUBLIC_BASE_URL
+        : `https://${process.env.NEXT_PUBLIC_BASE_URL || "localhost:3000"}`;
+
+    // ✅ Delete all images from ImageKit safely
     if (vehicle.images?.length > 0) {
       try {
         await Promise.all(
           vehicle.images.map(async (image) => {
             try {
-              const res = await fetch(`/api/imagekit/${image.fileId}`, {
+              const res = await fetch(`${baseUrl}/api/imagekit/${image.fileId}`, {
                 method: "DELETE",
               });
-              if (!res.ok) console.error(`Failed to delete image: ${image.fileId}`);
+
+              if (!res.ok) {
+                console.error(`❌ Failed to delete image: ${image.fileId}`);
+              }
             } catch (error) {
-              console.error(`Error deleting image ${image.fileId}:`, error);
+              console.error(`⚠️ Error deleting image ${image.fileId}:`, error);
             }
           })
         );
+        console.log("✅ All images deleted from ImageKit");
       } catch (err) {
-        console.error("ImageKit deletion error:", err);
+        console.error("❌ ImageKit deletion error:", err);
         return NextResponse.json(
           { success: false, error: "Failed to delete images" },
           { status: 500 }
@@ -159,7 +173,9 @@ export const DELETE = async (req, { params }) => {
       }
     }
 
+    // ✅ Delete the vehicle record
     await Rajesh.findByIdAndDelete(id);
+
     return NextResponse.json(
       { success: true, message: "Vehicle deleted successfully!" },
       { status: 200 }
