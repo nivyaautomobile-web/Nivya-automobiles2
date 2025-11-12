@@ -150,18 +150,24 @@ export default function Footer() {
         <div className='pt-6 mt-6 border-t border-gray-700'>
           <div className='flex flex-col items-center justify-between gap-6 text-sm text-gray-400 md:flex-row'>
             <div className='flex items-center gap-4'>
-              <Link href='#' className='transition-colors hover:text-white'>
+              <Link
+                href='/privacy-policy'
+                className='transition-colors hover:text-white'
+              >
                 Privacy Policy
               </Link>
               <span className='text-gray-600'>|</span>
-              <Link href='#' className='transition-colors hover:text-white'>
+              <Link
+                href='/terms-and-conditions'
+                className='transition-colors hover:text-white'
+              >
                 Terms of Service
               </Link>
             </div>
 
             <div className='flex flex-col items-center'>
               <Image
-                src='/nivya_logo.png'
+                src='/nivya_logo2.png'
                 alt='Nivya Automobiles'
                 width={180}
                 height={60}
