@@ -1,4 +1,3 @@
-// next.config.mjs
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const analyzer = withBundleAnalyzer({
@@ -8,6 +7,22 @@ const analyzer = withBundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
+  // ✅ Add Cache-Control headers for static/public images
+  async headers() {
+    return [
+      {
+        source: '/(.*)\\.(jpg|jpeg|png|gif|svg|webp|avif)$',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
+
   images: {
     remotePatterns: [
       {
@@ -30,7 +45,6 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.marutisuzuki.com',
       },
-
       {
         protocol: 'https',
         hostname: 'images-saboomaruti-in.s3.ap-south-1.amazonaws.com',
@@ -51,12 +65,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'imgd.aeplcdn.com',
       },
-       {
+      {
         protocol: 'https',
         hostname: 'ik.imagekit.io',
       },
-
-      
     ],
   },
 };
