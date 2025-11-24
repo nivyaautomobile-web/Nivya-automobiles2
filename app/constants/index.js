@@ -1498,12 +1498,11 @@ export const vehicles = {
   },
 };
 
-
-
- export const cars = [
+export const cars = [
   {
     name: 'VICTORIS',
-    image: 'https://www.skyautomobiles.in/thumbnail/victoris.png',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/victoris-min.png?updatedAt=1762775120494',
     price: '₹ 10.50 L*/-',
     brochure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/victoris/brochure/Maruti-Suzuki-Arena-Victoris-Brochure.pdf',
@@ -1511,63 +1510,72 @@ export const vehicles = {
   },
   {
     name: 'ALTO K10',
-    image: 'https://www.skyautomobiles.in/thumbnail/altoK10.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/victoris-min.png?updatedAt=1762775120494',
     price: '₹ 5.78 L* /-',
     brochure: '#',
     link: '/vehicles/alto-k10',
   },
   {
     name: 'SWIFT',
-    image: 'https://www.skyautomobiles.in/thumbnail/swift02.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/swift02.webp?updatedAt=1762775002755',
     price: '₹ 3.69 L* /-',
     brochure: '#',
     link: '/vehicles/swift',
   },
   {
     name: 'BREZZA',
-    image: 'https://www.skyautomobiles.in/thumbnail/brezza-page.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/brezza-page.webp?updatedAt=1762775002774',
     price: '₹ 8.25 L* /-',
     brochure: '#',
     link: '/vehicles/brezza',
   },
   {
     name: 'DZIRE',
-    image: 'https://www.skyautomobiles.in/thumbnail/bluishblack.png',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/dzire.png?updatedAt=1762775522682',
     price: '₹ 6.25 L* /-',
     brochure: '#',
     link: '/vehicles/dzire',
   },
   {
     name: 'S-PRESSO',
-    image: 'https://www.skyautomobiles.in/thumbnail/spresso.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/spresso.webp?updatedAt=1762775002873',
     price: '₹ 3.49* /-',
     brochure: '#',
     link: '/vehicles/spresso',
   },
   {
     name: 'WAGONR',
-    image: 'https://www.skyautomobiles.in/thumbnail/wagnor.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/wagnor.webp?updatedAt=1762775002796',
     price: '₹ 4.98* /-',
     brochure: '#',
     link: '/vehicles/wagonr',
   },
   {
     name: 'ERTIGA',
-    image: 'https://www.skyautomobiles.in/thumbnail/ertiga.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/wagnor.webp?updatedAt=1762775002796',
     price: '₹ 8.80* /-',
     brochure: '#',
     link: '/vehicles/ertiga',
   },
   {
     name: 'CELERIO',
-    image: 'https://www.skyautomobiles.in/thumbnail/celerio.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/celerio.webp?updatedAt=1762775002547',
     price: '₹ 4.69* /-',
     brochure: '#',
     link: '/vehicles/celerio',
   },
   {
     name: 'EECO',
-    image: 'https://www.skyautomobiles.in/thumbnail/Eeco.webp',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/Eeco.webp?updatedAt=1762775002541',
     price: '₹ 5.20* /-',
     brochure: '#',
     link: '/vehicles/eeco',
