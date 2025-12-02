@@ -5,6 +5,8 @@ export const vehicles = {
     name: 'Maruti Alto K10',
     price: '₹3.69 - 5.44 Lakh*',
     type: 'Hatchback',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Alto_K10_Brochure_Nivya_Automobiles_Anantapur.pdf',
     fuel: 'Petrol / CNG',
     seatingCapacity: '5',
     mileage: '24.90 Km/l',
@@ -138,6 +140,8 @@ export const vehicles = {
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/victoris/colors/red-removebg-preview.png',
     desc: 'Compact, stylish, and efficient — the Alto K10 brings comfort and performance at an affordable price.',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Victoris_Brochure_Nivya_Automobiles_Anantapur.pdf',
     colors: [
       {
         id: 0,
@@ -1521,7 +1525,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/swift02.webp?updatedAt=1762775002755',
     price: '₹ 3.69 L* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Alto_K10_Brochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Alto_K10_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/swift',
   },
   {
@@ -1529,7 +1534,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/brezza-page.webp?updatedAt=1762775002774',
     price: '₹ 8.25 L* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Brezza_Brochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Brezza_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/brezza',
   },
   {
@@ -1537,7 +1543,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/dzire.png?updatedAt=1762775522682',
     price: '₹ 6.25 L* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Dzire_Brochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Dzire_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/dzire',
   },
   {
@@ -1545,7 +1552,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/spresso.webp?updatedAt=1762775002873',
     price: '₹ 3.49* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/S-Presso_Brochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/S-Presso_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/spresso',
   },
   {
@@ -1553,7 +1561,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/wagnor.webp?updatedAt=1762775002796',
     price: '₹ 4.98* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/WagonR_Brochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/WagonR_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/wagonr',
   },
   {
@@ -1561,7 +1570,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/wagnor.webp?updatedAt=1762775002796',
     price: '₹ 8.80* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/ErtigaBrochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/ErtigaBrochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/ertiga',
   },
   {
@@ -1569,7 +1579,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/celerio.webp?updatedAt=1762775002547',
     price: '₹ 4.69* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Celerio_Brochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Celerio_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/celerio',
   },
   {
@@ -1577,7 +1588,8 @@ export const cars = [
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/Eeco.webp?updatedAt=1762775002541',
     price: '₹ 5.20* /-',
-    brochure: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/EECO_Brochure_Nivya_Automobiles_Anantapur.pdf',
+    brochure:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/EECO_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/eeco',
   },
 ];

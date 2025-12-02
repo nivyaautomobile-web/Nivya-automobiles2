@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FaGasPump, FaCarSide } from 'react-icons/fa';
 import { GiGearStickPattern } from 'react-icons/gi';
 import ColorSelector from '../ColorSelector';
+import Link from 'next/link';
 
 
 const HighlightCard = memo(({ label, value, icon: Icon }) => (
@@ -48,6 +49,7 @@ export default function CarPromoBanner({
   fuelType,
   engine,
   imageUrl,
+  brochure,
   colors = [],
   seatingCapacity,
   mileage,
@@ -96,27 +98,30 @@ export default function CarPromoBanner({
 
       {/* CTA Buttons */}
       <div className='flex flex-col items-center justify-center gap-4 py-12 md:flex-row md:gap-6'>
-        <a
-          href={`/brochure/${encodeURIComponent(carName)}`}
-          target='_blank'
-          className='px-8 py-3 font-semibold text-black transition-all duration-300 bg-gradient-to-r from-[#d4af37] to-[#f7e7ce] rounded-xl shadow-lg hover:shadow-xl hover:scale-105'
+
+{/* 
+        <Link
+          href='https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Victoris_Brochure_Nivya_Automobiles_Anantapur.pdf'
+          className="px-8 py-3 font-semibold text-black transition-all duration-300 bg-gradient-to-r from-[#d4af37] to-[#f7e7ce] rounded-xl shadow-lg hover:shadow-xl hover:scale-105"
         >
           View Brochure
-        </a>
-        <a
+        </Link> */}
+
+        <Link
           href={`/book-test-drive/${encodeURIComponent(carName)}`}
           className='px-8 py-3 font-semibold text-white transition-all duration-300 border-2 border-[#d4af37] rounded-xl shadow hover:bg-[#d4af37] hover:text-black hover:scale-105'
         >
           Book a Test Drive
-        </a>
-        <a
-          href='#vehicleForm'
+        </Link>
+
+        <Link
+          href="#vehicleForm"
+          scroll={true}
           className='px-8 py-3 font-semibold text-white transition-all duration-300 bg-[#c1121f] rounded-xl shadow hover:bg-[#d73326] hover:scale-105'
         >
           Get On-Road Price
-        </a>
+        </Link>
       </div>
-
       {/* Divider */}
       <div className='w-full h-px bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent'></div>
     </section>

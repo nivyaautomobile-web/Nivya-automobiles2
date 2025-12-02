@@ -24,6 +24,7 @@ export default function VehiclePage() {
       <CarPromoBanner
         carName={vehicle.name}
         price={vehicle.price}
+        brochure={vehicle.brochure}
         type={vehicle.type}
         fuelType={vehicle.fuel}
         engine={vehicle.engine}
