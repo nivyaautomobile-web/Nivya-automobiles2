@@ -1,11 +1,12 @@
 'use client';
 
 import ResponsiveBanner from '@/app/components/ResponsiveBanner';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
-// ---------- Data ----------
 const accessoriesData = {
   Exteriors: [
     {
@@ -843,22 +844,26 @@ const accessoriesData = {
   ],
 };
 
-// ---------- Components ----------
-const CategoryTabs = ({ active, onChange }) => (
-  <div className='flex flex-wrap justify-center gap-3 p-3 mb-8 bg-gray-100 rounded-lg'>
-    {Object.keys(accessoriesData).map((cat) => (
-      <button
-        key={cat}
-        onClick={() => onChange(cat)}
-        className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
-          active === cat
-            ? 'bg-black text-white shadow-md'
-            : 'bg-white text-gray-700 border hover:bg-gray-200'
-        }`}
-      >
-        {cat}
-      </button>
-    ))}
+// ---------- Category Tabs ----------
+const CategoryTabs = ({ active, onChange, loading }) => (
+  <div className="flex flex-wrap justify-center gap-3 p-3 mb-8 bg-gray-100 rounded-lg">
+    {loading
+      ? [...Array(5)].map((_, i) => (
+          <Skeleton key={i} width={100} height={35} borderRadius={8} />
+        ))
+      : Object.keys(accessoriesData).map((cat) => (
+          <button
+            key={cat}
+            onClick={() => onChange(cat)}
+            className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
+              active === cat
+                ? 'bg-black text-white shadow-md'
+                : 'bg-white text-gray-700 border hover:bg-gray-200'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
   </div>
 );
 
@@ -873,90 +878,108 @@ const AccessoryCard = ({
   errors,
   isSubmitting,
   message,
-}) => (
-  <div className='flex flex-col items-center p-4 transition border rounded-lg shadow-sm hover:shadow-lg'>
-    <Image
-      src={item.img}
-      alt={item.name}
-      width={400} // set a suitable width
-      height={200} // set a suitable height
-      className='object-cover mb-4 rounded-md'
-      loading='lazy'
-    />
+  loading,
+}) => {
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center p-4 border rounded-lg shadow-sm">
+        <Skeleton height={140} width="100%" />
+        <Skeleton height={18} width="80%" className="mt-3" />
+        <Skeleton height={14} width="50%" className="mt-1" />
+        <Skeleton height={35} width="60%" className="mt-3" />
+      </div>
+    );
+  }
 
-    <h3 className='mb-1 text-sm font-medium text-center'>{item.name}</h3>
-    <p className='mb-3 text-xs text-gray-500'>{item.code}</p>
+  return (
+    <div className="flex flex-col items-center p-4 transition border rounded-lg shadow-sm hover:shadow-lg">
+      <Image
+        src={item.img}
+        alt={item.name}
+        width={400}
+        height={200}
+        className="object-cover mb-4 rounded-md"
+        loading="lazy"
+      />
 
-    <button
-      onClick={() => onOrder(item)}
-      className='px-4 py-2 text-white transition bg-black rounded hover:bg-gray-800'
-    >
-      {isOpen ? 'CLOSE FORM' : 'ORDER NOW'}
-    </button>
+      <h3 className="mb-1 text-sm font-medium text-center">{item.name}</h3>
+      <p className="mb-3 text-xs text-gray-500">{item.code}</p>
 
-    {isOpen && (
-      <form
-        onSubmit={onSubmit}
-        className='w-full p-4 mt-4 text-sm border rounded-md bg-gray-50'
+      <button
+        onClick={() => onOrder(item)}
+        className="px-4 py-2 text-white transition bg-black rounded hover:bg-gray-800"
       >
-        <h4 className='mb-2 font-semibold text-center text-gray-700'>
-          Order for {item.name}
-        </h4>
-        <p className='mb-3 text-xs text-center text-gray-500'>
-          Product Code: {item.code}
-        </p>
+        {isOpen ? 'CLOSE FORM' : 'ORDER NOW'}
+      </button>
 
-        <input
-          type='text'
-          placeholder='Your Name'
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className={`w-full px-3 py-2 mb-2 text-sm border rounded-md ${
-            errors.name ? 'border-red-500' : ''
-          }`}
-        />
-        {errors.name && (
-          <p className='mb-2 text-xs text-red-500'>{errors.name}</p>
-        )}
+      {isOpen && (
+        <form
+          onSubmit={onSubmit}
+          className="w-full p-4 mt-4 text-sm border rounded-md bg-gray-50"
+        >
+          <h4 className="mb-2 font-semibold text-center text-gray-700">
+            Order for {item.name}
+          </h4>
+          <p className="mb-3 text-xs text-center text-gray-500">
+            Product Code: {item.code}
+          </p>
 
-        <input
-          type='tel'
-          placeholder='Phone Number'
-          value={formData.phone}
-          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          className={`w-full px-3 py-2 mb-2 text-sm border rounded-md ${
-            errors.phone ? 'border-red-500' : ''
-          }`}
-        />
-        {errors.phone && (
-          <p className='mb-2 text-xs text-red-500'>{errors.phone}</p>
-        )}
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            className={`w-full px-3 py-2 mb-2 text-sm border rounded-md ${
+              errors.name ? 'border-red-500' : ''
+            }`}
+          />
+          {errors.name && (
+            <p className="mb-2 text-xs text-red-500">{errors.name}</p>
+          )}
 
-        {message && (
-          <p
-            className={`mb-2 text-center text-sm ${
-              message.type === 'success' ? 'text-green-600' : 'text-red-500'
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
+            className={`w-full px-3 py-2 mb-2 text-sm border rounded-md ${
+              errors.phone ? 'border-red-500' : ''
+            }`}
+          />
+          {errors.phone && (
+            <p className="mb-2 text-xs text-red-500">{errors.phone}</p>
+          )}
+
+          {message && (
+            <p
+              className={`mb-2 text-center text-sm ${
+                message.type === 'success'
+                  ? 'text-green-600'
+                  : 'text-red-500'
+              }`}
+            >
+              {message.text}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className={`w-full py-2 mt-2 text-white rounded ${
+              isSubmitting
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-red-500 hover:bg-red-600'
             }`}
           >
-            {message.text}
-          </p>
-        )}
-
-        <button
-          type='submit'
-          disabled={isSubmitting}
-          className={`w-full py-2 mt-2 text-white rounded ${
-            isSubmitting
-              ? 'bg-gray-400 cursor-not-allowed'
-              : 'bg-red-500 hover:bg-red-600'
-          }`}
-        >
-          {isSubmitting ? 'Submitting...' : 'Submit Order'}
-        </button>
-      </form>
-    )}
-  </div>
-);
+            {isSubmitting ? 'Submitting...' : 'Submit Order'}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+};
 
 // ---------- Main Page ----------
 export default function AccessoriesPage() {
@@ -966,8 +989,15 @@ export default function AccessoriesPage() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const accessories = accessoriesData[activeCategory];
+  // shimmer effect
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(t);
+  }, []);
+
+  const accessories = accessoriesData[activeCategory] || [];
 
   const handleOrderClick = (product) => {
     setSelectedProduct(selectedProduct?.code === product.code ? null : product);
@@ -979,23 +1009,21 @@ export default function AccessoriesPage() {
   // ---------- Validation ----------
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-    const phonePattern = /^[6-9]\d{9}$/; // 10-digit Indian phone number
-    if (!phonePattern.test(formData.phone)) {
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+
+    const phonePattern = /^[6-9]\d{9}$/;
+    if (!phonePattern.test(formData.phone))
       newErrors.phone = 'Enter a valid 10-digit phone number';
-    }
+
     return newErrors;
   };
 
-  // ---------- Submit Handler ----------
-
+  // ---------- Submit ----------
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length > 0) {
+    if (Object.keys(validationErrors).length) {
       setErrors(validationErrors);
       return;
     }
@@ -1018,60 +1046,65 @@ export default function AccessoriesPage() {
 
       const data = await res.json();
 
-      if (!res.ok) {
-        throw new Error(data.error || 'Something went wrong.');
-      }
+      if (!res.ok) throw new Error(data.error || 'Something went wrong.');
 
-      // ✅ Show success toast
-      toast.success(data.message || '✅ Order placed!');
+      toast.success(data.message || 'Order placed!');
       setFormData({ name: '', phone: '' });
       setSelectedProduct(null);
     } catch (error) {
-      toast.error({ type: 'error', text: error.message });
+      toast.error(error.message);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <>
-      <div className='mt-20'>
-        <ResponsiveBanner
-          desktopSrc='https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fcontact%20us%20banner.webp&w=3840&q=75'
-          mobileSrc='https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Foffer_mobile.webp&w=1080&q=75'
-          altText='Sky Automobiles Contact Us Banner'
-        />
-      </div>
-      <div className='container px-4 py-8 mx-auto max-w-7xl'>
-        <h2 className='mb-6 text-2xl font-semibold text-center'>
-          Genuine Accessories
-        </h2>
-
-        <CategoryTabs active={activeCategory} onChange={setActiveCategory} />
-
-        {accessories.length === 0 ? (
-          <p className='text-center text-gray-500'>
-            No accessories available for this category.
-          </p>
+    <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
+      <div className="mt-20">
+        {loading ? (
+          <Skeleton height={250} borderRadius={0} />
         ) : (
-          <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-            {accessories.map((item) => (
-              <AccessoryCard
-                key={item.code}
-                item={item}
-                isOpen={selectedProduct?.code === item.code}
-                formData={formData}
-                setFormData={setFormData}
-                onOrder={handleOrderClick}
-                onSubmit={handleSubmit}
-                errors={errors}
-                isSubmitting={isSubmitting}
-                message={message}
-              />
-            ))}
-          </div>
+          <ResponsiveBanner
+            desktopSrc="https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fcontact%20us%20banner.webp&w=3840&q=75"
+            mobileSrc="https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Foffer_mobile.webp&w=1080&q=75"
+            altText="Accessories Banner"
+          />
         )}
       </div>
-    </>
+
+      <div className="container px-4 py-8 mx-auto max-w-7xl">
+        {loading ? (
+          <Skeleton width={200} height={30} className="mx-auto mb-6" />
+        ) : (
+          <h2 className="mb-6 text-2xl font-semibold text-center">
+            Genuine Accessories
+          </h2>
+        )}
+
+        <CategoryTabs
+          active={activeCategory}
+          onChange={setActiveCategory}
+          loading={loading}
+        />
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {(loading ? Array(8).fill({}) : accessories).map((item, i) => (
+            <AccessoryCard
+              key={i}
+              item={item}
+              loading={loading}
+              isOpen={selectedProduct?.code === item.code}
+              formData={formData}
+              setFormData={setFormData}
+              onOrder={handleOrderClick}
+              onSubmit={handleSubmit}
+              errors={errors}
+              isSubmitting={isSubmitting}
+              message={message}
+            />
+          ))}
+        </div>
+      </div>
+    </SkeletonTheme>
   );
 }

@@ -14,7 +14,6 @@ import { GoTools } from "react-icons/go";
 import axios from "axios";
 import { ImWindows8 } from "react-icons/im";
 import { VscBook } from "react-icons/vsc";
-import { BsPostcard } from "react-icons/bs";
 
 export default function Sidebar({ isCollapsed, toggleSidebar, pathname }) {
   const router = useRouter();
