@@ -1141,7 +1141,7 @@ export const vehicles = {
     engine: '1462cc',
     seatingCapacity: '7',
     mileage: '26.11 Km/Kg*',
-    image: 'https://www.saboomaruti.in/images/alto-k10.png',
+    image: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/ertiga.webp?updatedAt=1762775002557',
     colors: [
       {
         id: 0,
@@ -1568,7 +1568,7 @@ export const cars = [
   {
     name: 'ERTIGA',
     image:
-      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/wagnor.webp?updatedAt=1762775002796',
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/ertiga.webp?updatedAt=1762775002557',
     price: '₹ 8.80* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/ErtigaBrochure_Nivya_Automobiles_Anantapur.pdf',
