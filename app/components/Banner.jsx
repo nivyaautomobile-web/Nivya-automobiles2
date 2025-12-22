@@ -67,7 +67,7 @@ export default function Banner({ sliders = [] }) {
                         alt={item.alt || "Banner"}
                         width={1920}
                         height={800}
-                        className="object-cover w-full h-auto"
+                        className="object-cover w-full h-auto md:mt-20 md:mb-16 lg:mt-12 lg:mb-10 xl:mt-0 xl:mb-2 2xl:mt-0 2xl:mb-0"
                         priority={index === 0}
                       />
                     </div>
