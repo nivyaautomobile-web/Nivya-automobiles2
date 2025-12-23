@@ -60,14 +60,9 @@ export default function About() {
             {loading ? (
               <Skeleton height={350} width={"100%"} className="rounded-lg" />
             ) : (
-              <div className="w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Nivya Automobiles"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+              <div className="w-full overflow-hidden rounded-lg shadow-md">
+                <img src="/images/showroom.jpeg"/>
+          
               </div>
             )}
           </div>

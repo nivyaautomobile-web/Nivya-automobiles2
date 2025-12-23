@@ -10,7 +10,7 @@ export default function HeroSection() {
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
-      link: '/',
+      link: '/vehicles/swift',
     },
     {
       desktopImg:
@@ -18,24 +18,24 @@ export default function HeroSection() {
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
-      link: '/',
+      link: '/vehicles/swift',
     },
-        {
+    {
       desktopImg:
         '/images/maruti-suzuki-arena-victoris-web-banner2.jpg',
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
-      link: '/',
+      link: '/vehicles/victoris',
     },
-    //       {
-    //   desktopImg:
-    //     '/images/banner.png',
-    //   mobileImg:
-    //     'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
-    //   alt: 'Monsoon',
-    //   link: '/',
-    // },
+    {
+      desktopImg:
+        '/images/Untitled-1.jpg',
+      mobileImg:
+        'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
+      alt: 'Monsoon',
+      link: '/vehicles/swift',
+    },
     //        {
     //   desktopImg:
     //     '/images/banner-service.jpg',

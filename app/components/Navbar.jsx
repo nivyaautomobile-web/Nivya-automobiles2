@@ -127,15 +127,15 @@ export default function Navbar() {
                   <DropdownItem href="/insurance" onClick={closeAllMenus}>
                     Insurance
                   </DropdownItem>
-                  <DropdownItem href="/accessories" onClick={closeAllMenus}>
+                  {/* <DropdownItem href="/accessories" onClick={closeAllMenus}>
                     Accessories
-                  </DropdownItem>
+                  </DropdownItem> */}
                   <DropdownItem href="/career" onClick={closeAllMenus}>
                     Career
                   </DropdownItem>
-                  <DropdownItem href="/compare-cars" onClick={closeAllMenus}>
+                  {/* <DropdownItem href="/compare-cars" onClick={closeAllMenus}>
                     Compare Cars
-                  </DropdownItem>
+                  </DropdownItem> */}
                 </DropdownMenu>
               )}
             </li>
@@ -267,9 +267,9 @@ export default function Navbar() {
                     <DropdownItemMobile href="/insurance" onClick={closeAllMenus}>
                       Insurance
                     </DropdownItemMobile>
-                    <DropdownItemMobile href="/accessories" onClick={closeAllMenus}>
+                    {/* <DropdownItemMobile href="/accessories" onClick={closeAllMenus}>
                       Accessories
-                    </DropdownItemMobile>
+                    </DropdownItemMobile> */}
                     <DropdownItemMobile href="/career" onClick={closeAllMenus}>
                       Career
                     </DropdownItemMobile>

@@ -69,7 +69,7 @@ export default function InsurancePage() {
       </div>
 
       {/* ---------- Contact Section ---------- */}
-      <section className='flex flex-col items-center py-24 bg-gradient-to-b from-white to-cyan-50'>
+      <section className='flex flex-col items-center py-24 bg-linear-to-b from-white to-cyan-50'>
         <div className='w-full px-6 max-w-7xl'>
           {/* Header */}
           <div className='text-center mb-14'>
@@ -95,18 +95,22 @@ export default function InsurancePage() {
                 <ul className='space-y-6'>
                   <li className='flex items-center gap-3'>
                     <Phone className='w-5 h-5 text-white/90' />
-                    <div>
-                      <p className='text-white/90'>+91 98765 43210</p>
-                      <p className='text-white/90'>+91 91234 56789</p>
+                    <div className=''>
+                      <a
+                        href="tel:+917587666999"
+                        className="transition text-white/90 hover:text-white"
+                      >
+                        +917587666999
+                      </a>
                     </div>
                   </li>
                   <li className='flex items-center gap-3'>
                     <Mail className='w-5 h-5 text-white/90' />
-                    <p className='text-white/90'>support@sabooinsurance.com</p>
+                    <a href='mailto:nivya.atp.sm@marutidealers.com' className='text-white/90'>nivya.atp.sm@marutidealers.com</a>
                   </li>
                   <li className='flex items-center gap-3'>
                     <MapPin className='w-5 h-5 text-white/90' />
-                    <p className='text-white/90'>Hyderabad, Telangana</p>
+                    <a href='https://www.google.com/maps/place/Maruti+Suzuki+ARENA+(Nivya+Automobiles,+Anantapur,+Shilparamam)/data=!4m2!3m1!1s0x0:0x82f61324536d3575?sa=X&ved=1t:2428&ictx=111' className='text-white/90'>Maruti Suzuki ARENA (Nivya Automobiles, Anantapur, Shilparamam)</a>
                   </li>
                 </ul>
               </div>

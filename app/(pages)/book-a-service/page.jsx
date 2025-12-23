@@ -46,14 +46,7 @@ export default function ServicePage() {
           {/* Background Glow Effects */}
 
           <div className='absolute rounded-full bg-gradient-to-r from-[#bcac77] to-[#bc7501] bottom-10 right-10 w-72 h-72 opacity-20 blur-3xl'></div>
-
-          {/* Booking Form */}
-          <div className='w-full max-w-full mt-8'>
-            <ServiceForm />
-          </div>
-
-          {/* Explore Services Section */}
-          <div className='z-10 w-full text-center'>
+<div className='z-10 w-full text-center'>
             <h2 className='mb-10 text-3xl font-bold md:text-4xl'>
               Explore Our Services
             </h2>
@@ -61,6 +54,12 @@ export default function ServicePage() {
               <ServiceFeatures />
             </div>
           </div>
+          {/* Booking Form */}
+          <div className='w-full max-w-full mt-8'>
+            <ServiceForm />
+          </div>
+
+          
         </section>
       </div>
     </>
