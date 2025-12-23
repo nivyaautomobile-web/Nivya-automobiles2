@@ -1,40 +1,26 @@
-import Script from 'next/script';
-import './globals.css';
-import LayoutWrapper from './LayoutWrapper';
+import Script from "next/script";
+import "./globals.css";
+import LayoutWrapper from "./LayoutWrapper";
 
 export const metadata = {
-  title: 'Nivya Automobiles',
+  title: "Nivya Automobiles",
   description:
-    'Explore new and used Maruti Suzuki cars in Hyderabad with Nivya Automobiles. Find the best deals, offers, and services.',
+    "Explore new and used Maruti Suzuki cars in Hyderabad with Nivya Automobiles. Find the best deals, offers, and services.",
   verification: {
-    google: 'SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw',
+    google: "SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw",
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <head>
-        {/* Google Analytics */}
-        <Script
-          src='https://www.googletagmanager.com/gtag/js?id=G-LP6Q5Z2HK2'
-          strategy='afterInteractive'
-        />
-
-        <Script id='ga-gtag' strategy='afterInteractive'>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-LP6Q5Z2HK2');
-          `}
-        </Script>
         {/* Google Tag Manager */}
-        <Script id='gtm-script' strategy='afterInteractive'>
+        <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];
             w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -46,6 +32,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
+
       <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -56,6 +43,7 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
