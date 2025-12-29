@@ -29,7 +29,7 @@ export default function ClientHeroTabs() {
   const { activeTab, handleTabChange, tabs } = useHeroTabs();
 
   return (
-    <div className='relative z-20 max-w-6xl px-4 mx-auto -mt-24 md:px-0'>
+    <div className='relative z-20 max-w-6xl px-4 mx-auto -mt-16 md:px-0'>
       <div className='overflow-hidden text-black bg-white shadow-2xl rounded-2xl'>
         <div className='grid grid-cols-3 text-sm font-semibold text-center md:text-base'>
           {tabs.map((tab) => (

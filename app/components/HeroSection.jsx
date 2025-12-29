@@ -6,7 +6,7 @@ export default function HeroSection() {
   const sliders = [
     {
       desktopImg:
-        'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_page_swift.webp&w=3840&q=75',
+        '/images/Nivya-Web-Banner-Year-End.webp',
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
@@ -14,7 +14,7 @@ export default function HeroSection() {
     },
     {
       desktopImg:
-        '/images/marutisuzuki-yearend-carnivals-web-banner_(1).jpg',
+        '/images/Nivya-Web-Banner-Accessories.webp',
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
@@ -22,20 +22,13 @@ export default function HeroSection() {
     },
     {
       desktopImg:
-        '/images/maruti-suzuki-arena-victoris-web-banner2.jpg',
+        '/images/Nivya-Web-Banner-Victoris.webp',
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
       link: '/vehicles/victoris',
     },
-    {
-      desktopImg:
-        '/images/Untitled-1.jpg',
-      mobileImg:
-        'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
-      alt: 'Monsoon',
-      link: '/vehicles/swift',
-    },
+ 
     //        {
     //   desktopImg:
     //     '/images/banner-service.jpg',
@@ -48,7 +41,8 @@ export default function HeroSection() {
 
   return (
     <section className="relative">
-      <Banner sliders={sliders} />
+      <div className='mt-20'>
+      <Banner sliders={sliders} /></div>
       <ClientHeroTabs />
     </section>
   );
