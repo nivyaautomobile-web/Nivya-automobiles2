@@ -1,7 +1,7 @@
 export const sliders = {};
 
 export const vehicles = {
-  'alto-k10': {
+  'alto-k10-on-road-price-in-Anantapur': {
     name: 'Maruti Alto K10',
     price: '₹3.69 - 5.44 Lakh*',
     type: 'Hatchback',
@@ -122,14 +122,13 @@ export const vehicles = {
         },
       ],
     },
-    metaTitle:
-      'Maruti Suzuki Alto K10 2025 – Price, Mileage, Features & On-Road Offers',
+    metaTitle: 'Maruti Alto K10 Price in Anantapur | Budget Car – Nivya Arena',
     metaDescription:
-      'Explore the all-new Maruti Suzuki Alto K10 2025 at Nivya Automobiles. Check the latest on-road price, mileage, specifications, colors, and features. Book a test drive or get exciting offers today!',
+      'Buy Maruti Alto K10 in Anantapur at best price. Entry-level car with great mileage & finance options at Nivya Automobiles.',
     metaKeywords:
-      'Alto K10, Maruti Suzuki Alto K10 2025, Alto K10 price, Alto K10 mileage, Alto K10 variants, Alto K10 features, Alto K10 on-road price, Nivya Automobiles, Maruti showroom Anantapur',
+      'Maruti Alto K10 price Anantapur, Alto K10 mileage, Alto K10 on road price',
   },
-  victoris: {
+  'victoris-on-road-price-in-Anantapur': {
     name: 'Maruti VICTORIS',
     price: '₹10.50 - 19.99 Lakh*',
     type: 'SUV',
@@ -450,13 +449,13 @@ export const vehicles = {
       ],
     },
     metaTitle:
-      'Maruti Suzuki Victoris 2025 – Price, Mileage, Features & On-Road Offers',
+      'Maruti Victoris Price in Anantapur | Award Winning SUV – Nivya Arena',
     metaDescription:
-      'Discover the bold and powerful Maruti Suzuki Victoris 2025 at Nivya Automobiles. Explore its on-road price, mileage, specifications, variants, and smart features. Book a test drive or get exciting offers today!',
+      'Discover Maruti Victoris SUV in Anantapur. ICOTY-winning performance, safety & style. Visit Nivya Automobiles today.',
     metaKeywords:
-      'Maruti Suzuki Victoris 2025, Victoris price, Victoris mileage, Victoris variants, Victoris features, Victoris on-road price, Maruti Victoris SUV, Maruti Brezza, Nivya Automobiles, Maruti showroom Anantapur',
+      'Maruti Victoris price Anantapur, Victoris SUV, ICOTY Maruti, Victoris Arena dealer',
   },
-  swift: {
+  'swift-on-road-price-in-Anantapur': {
     name: 'Maruti Swift',
     price: '₹5.78 - 8.79 Lakh*',
     type: 'Hatchback',
@@ -601,13 +600,13 @@ export const vehicles = {
       ],
     },
     metaTitle:
-      'Maruti Suzuki Swift 2025 – Price, Mileage, Features & On-Road Offers',
+      'Maruti Swift Price in Anantapur | On-Road Price & Offers – Nivya Arena',
     metaDescription:
-      'Explore the dynamic Maruti Suzuki Swift 2025 at Nivya Automobiles. Check the latest on-road price, sporty design, powerful performance, and available variants. Book a test drive now!',
+      'Check Maruti Swift on-road price in Anantapur at Nivya Automobiles. Mileage, variants, latest offers & easy finance available. Book a test drive now.',
     metaKeywords:
-      'Swift, Maruti Suzuki Swift 2025, Swift price, Swift mileage, Swift variants, Swift features, Swift on-road price, Nivya Automobiles, Maruti showroom Anantapur',
+      'Maruti Swift price Anantapur, Swift on road price, Swift mileage, Swift variants, Swift Arena showroom',
   },
-  brezza: {
+  'brezza-on-road-price-in-Anantapur': {
     name: 'Maruti Brezza',
     price: '₹8.25 - 13.01 Lakh*',
     type: 'SUV',
@@ -767,11 +766,11 @@ export const vehicles = {
     metaTitle:
       'Maruti Suzuki Brezza 2025 – Price, Mileage, Features & On-Road Offers',
     metaDescription:
-      'Explore the bold and powerful Maruti Suzuki Brezza 2025 at Nivya Automobiles. Learn about prices, mileage, performance, and safety features. Visit our showroom today!',
+      'Explore Maruti Brezza SUV on-road price in Anantapur. Powerful performance, safety features & festive offers at Nivya Automobiles.',
     metaKeywords:
       'Brezza, Maruti Suzuki Brezza 2025, Brezza price, Brezza mileage, Brezza variants, Brezza features, Brezza on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
-  dzire: {
+  'dzire-on-road-price-in-Anantapur': {
     name: 'Maruti Dzire',
     price: '₹6.25 - 9.31 Lakh*',
     type: 'SEDANS',
@@ -870,13 +869,13 @@ export const vehicles = {
     ],
 
     metaTitle:
-      'Maruti Suzuki Dzire 2025 – Price, Mileage, Features & On-Road Offers',
+      'Maruti Dzire Price in Anantapur | Best Sedan Offers – Nivya Arena',
     metaDescription:
-      'Discover elegance and comfort with the Maruti Suzuki Dzire 2025 at Nivya Automobiles. Explore its on-road price, variants, mileage, and advanced features. Test drive available!',
+      'Buy Maruti Dzire in Anantapur with best price, high mileage & latest offers. Visit Nivya Automobiles for test drive, finance & insurance.',
     metaKeywords:
       'Dzire, Maruti Suzuki Dzire 2025, Dzire price, Dzire mileage, Dzire variants, Dzire features, Dzire on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
-  spresso: {
+  'spresso-on-road-price-in-Anantapur': {
     name: 'Maruti S-Presso',
     price: '₹3.49 - 5.24 Lakh*',
     type: 'Hatchback',
@@ -983,13 +982,13 @@ export const vehicles = {
       },
     ],
     metaTitle:
-      'Maruti Suzuki S-Presso 2025 – Price, Mileage, Features & On-Road Offers',
+      'Maruti S-Presso Price in Anantapur | Compact SUV Style – Nivya',
     metaDescription:
-      'Discover the sporty and compact Maruti Suzuki S-Presso 2025 at Nivya Automobiles. View on-road prices, mileage, specifications, and features. Book your test drive today!',
+      'Check Maruti S-Presso price in Anantapur. Bold design, high mileage & attractive offers at Nivya Automobiles Arena.',
     metaKeywords:
       'S-Presso, Maruti Suzuki S-Presso 2025, S-Presso price, S-Presso mileage, S-Presso variants, S-Presso features, S-Presso on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
-  wagonr: {
+  'wagonr-on-road-price-in-Anantapur': {
     name: 'Maruti WagonR',
     price: '₹4.98 - 6.94 Lakh*',
     type: 'Hatchback',
@@ -1133,7 +1132,7 @@ export const vehicles = {
     metaKeywords:
       'WagonR, Maruti Suzuki WagonR 2025, WagonR price, WagonR mileage, WagonR variants, WagonR features, WagonR on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
-  ertiga: {
+  'ertiga-on-road-price-in-Anantapur': {
     name: 'Maruti Ertiga',
     price: '₹8.80 - 12.94 Lakh*',
     type: 'MUV',
@@ -1141,7 +1140,8 @@ export const vehicles = {
     engine: '1462cc',
     seatingCapacity: '7',
     mileage: '26.11 Km/Kg*',
-    image: 'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/ertiga.webp?updatedAt=1762775002557',
+    image:
+      'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/ertiga.webp?updatedAt=1762775002557',
     colors: [
       {
         id: 0,
@@ -1253,7 +1253,7 @@ export const vehicles = {
     metaKeywords:
       'Ertiga, Maruti Suzuki Ertiga 2025, Ertiga price, Ertiga mileage, Ertiga variants, Ertiga features, Ertiga on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
-  celerio: {
+  'celerio-on-road-price-in-Anantapur': {
     name: 'Maruti Celerio',
     price: '₹4.69 - 6.72 Lakh*',
     type: 'Hatchback',
@@ -1356,7 +1356,7 @@ export const vehicles = {
     metaKeywords:
       'Celerio, Maruti Suzuki Celerio 2025, Celerio price, Celerio mileage, Celerio variants, Celerio features, Celerio on-road price, Nivya Automobiles, Maruti showroom Anantapur',
   },
-  eeco: {
+  'eeco-on-road-price-in-Anantapur': {
     name: 'Maruti Eeco',
     price: '₹5.20 - 8.01 Lakh*',
     type: 'VAN',
@@ -1510,7 +1510,7 @@ export const cars = [
     price: '₹ 10.50 L*/-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Victoris_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/victoris',
+    link: '/vehicles/victoris-on-road-price-in-Anantapur',
   },
   {
     name: 'ALTO K10',
@@ -1518,7 +1518,7 @@ export const cars = [
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/altoK10.webp?updatedAt=1762775002768',
     price: '₹ 5.78 L* /-',
     brochure: '#',
-    link: '/vehicles/alto-k10',
+    link: '/vehicles/alto-k10-on-road-price-in-Anantapur',
   },
   {
     name: 'SWIFT',
@@ -1527,7 +1527,7 @@ export const cars = [
     price: '₹ 3.69 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Alto_K10_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/swift',
+    link: '/vehicles/swift-on-road-price-in-Anantapur',
   },
   {
     name: 'BREZZA',
@@ -1536,7 +1536,7 @@ export const cars = [
     price: '₹ 8.25 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Brezza_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/brezza',
+    link: '/vehicles/brezza-on-road-price-in-Anantapur',
   },
   {
     name: 'DZIRE',
@@ -1545,7 +1545,7 @@ export const cars = [
     price: '₹ 6.25 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Dzire_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/dzire',
+    link: '/vehicles/dzire-on-road-price-in-Anantapur',
   },
   {
     name: 'S-PRESSO',
@@ -1554,7 +1554,7 @@ export const cars = [
     price: '₹ 3.49 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/S-Presso_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/spresso',
+    link: '/vehicles/spresso-on-road-price-in-Anantapur',
   },
   {
     name: 'WAGONR',
@@ -1563,7 +1563,7 @@ export const cars = [
     price: '₹ 4.98 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/WagonR_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/wagonr',
+    link: '/vehicles/wagonr-on-road-price-in-Anantapur',
   },
   {
     name: 'ERTIGA',
@@ -1572,7 +1572,7 @@ export const cars = [
     price: '₹ 8.80 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/ErtigaBrochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/ertiga',
+    link: '/vehicles/ertiga-on-road-price-in-Anantapur',
   },
   {
     name: 'CELERIO',
@@ -1581,7 +1581,7 @@ export const cars = [
     price: '₹ 4.69 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Celerio_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/celerio',
+    link: '/vehicles/celerio-on-road-price-in-Anantapur',
   },
   {
     name: 'EECO',
@@ -1590,6 +1590,6 @@ export const cars = [
     price: '₹ 5.20 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/EECO_Brochure_Nivya_Automobiles_Anantapur.pdf',
-    link: '/vehicles/eeco',
+    link: '/vehicles/eeco-on-road-price-in-Anantapur',
   },
 ];
