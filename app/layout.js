@@ -1,26 +1,28 @@
-import Script from "next/script";
-import "./globals.css";
-import LayoutWrapper from "./LayoutWrapper";
+import Script from 'next/script';
+import './globals.css';
+import LayoutWrapper from './LayoutWrapper';
+import ModalConf from './components/ModalConf';
+import NumberPopup from './components/forms/Popup';
 
 export const metadata = {
-  title: "Nivya Automobiles",
+  title: 'Nivya Automobiles',
   description:
-    "Explore new and used Maruti Suzuki cars in Hyderabad with Nivya Automobiles. Find the best deals, offers, and services.",
+    'Explore new and used Maruti Suzuki cars in Hyderabad with Nivya Automobiles. Find the best deals, offers, and services.',
   verification: {
-    google: "SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw",
+    google: 'SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw',
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
         {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive">
+        <Script id='gtm-script' strategy='afterInteractive'>
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];
             w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -37,14 +39,18 @@ export default function RootLayout({ children }) {
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-M6KJ9FF2"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
+            src='https://www.googletagmanager.com/ns.html?id=GTM-M6KJ9FF2'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
 
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <LayoutWrapper>
+          <ModalConf />
+          <NumberPopup />
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );

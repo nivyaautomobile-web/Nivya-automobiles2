@@ -10,7 +10,7 @@ export default function HeroSection() {
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
-      link: '/vehicles/swift',
+      link: '/vehicles',
     },
     {
       desktopImg:
@@ -18,7 +18,7 @@ export default function HeroSection() {
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
-      link: '/vehicles/swift',
+      link: '/vehicles/swift-on-road-price-in-Anantapur',
     },
     {
       desktopImg:
@@ -26,7 +26,7 @@ export default function HeroSection() {
       mobileImg:
         'https://www.skyautomobiles.in/_next/image?url=%2Fimages%2Fother%2Fmain_swift_mobile.webp&w=1080&q=75',
       alt: 'Monsoon',
-      link: '/vehicles/victoris',
+      link: '/vehicles/victoris-on-road-price-in-Anantapur',
     },
 
     //        {
