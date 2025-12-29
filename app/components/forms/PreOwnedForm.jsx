@@ -139,7 +139,7 @@ export default function PreOwnedForm() {
         <button
           type='submit'
           disabled={isSubmitting}
-          className='w-full py-3 font-semibold text-white transition-all duration-300 bg-black rounded-lg hover:bg-gray-800 disabled:opacity-60'
+          className='w-full py-3 font-semibold text-white transition-all duration-300 bg-[#283791]   hover:bg-red-700 rounded-lg disabled:opacity-60'
         >
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>

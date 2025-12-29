@@ -94,6 +94,7 @@ export default function ContactForm() {
             type='text'
             name='name'
             placeholder='Full Name'
+            required
             value={formData.name}
             onChange={handleChange}
             className='w-full p-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500'
@@ -103,6 +104,7 @@ export default function ContactForm() {
             name='email'
             placeholder='Your Email'
             value={formData.email}
+            required
             onChange={handleChange}
             className='w-full p-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500'
           />
@@ -115,6 +117,7 @@ export default function ContactForm() {
           placeholder='Your number'
           value={formData.number}
           onChange={handleChange}
+          required
           className='w-full p-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500'
         />
         <textarea
@@ -124,11 +127,12 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           className='w-full p-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500'
+          required
         ></textarea>
         <button
           type='submit'
           disabled={loading}
-          className={`px-6 py-3 font-semibold text-white transition bg-gradient-to-r from-[#bcac77] to-[#bc7501] rounded-lg shadow-md hover:bg-blue-700 ${
+          className={`px-6 py-3 font-semibold text-white transition bg-[#283791]   rounded-lg shadow-md hover:bg-red-700 ${
             loading ? 'opacity-60 cursor-not-allowed' : ''
           }`}
         >

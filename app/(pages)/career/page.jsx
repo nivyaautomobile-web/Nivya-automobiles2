@@ -2,9 +2,10 @@ import React from 'react';
 import CareerPage from './career';
 
 export const metadata = {
-  title: 'Careers | Nivya Automobiles',
+  title: 'Careers at Nivya Automobiles | Maruti Suzuki Jobs Anantapur',
   description:
-    'Join the Nivya Automobiles team in Hyderabad. Explore open positions, apply online, and grow your career with us.',
+    'Explore career opportunities at Nivya Automobiles, authorised Maruti Suzuki Arena dealer in Anantapur. Apply today.',
+  keywords: 'Maruti jobs Anantapur, automobile jobs Anantapur',
   openGraph: {
     title: 'Careers | Nivya Automobiles',
     description:

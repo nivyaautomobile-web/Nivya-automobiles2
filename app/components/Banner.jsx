@@ -17,7 +17,7 @@ export default function Banner({ sliders = [] }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 500);
+    const t = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(t);
   }, []);
   ;
@@ -40,7 +40,7 @@ export default function Banner({ sliders = [] }) {
     >
       <div className="relative w-full">
         <Swiper
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           navigation={{
             nextEl: navigationNextRef.current,
             prevEl: navigationPrevRef.current,
@@ -67,18 +67,20 @@ export default function Banner({ sliders = [] }) {
                 <Link href={item.link || "#"} className="select-none">
                   {/* Desktop */}
                   <div className="hidden md:block">
-                    <Image
-                      src={item.desktopImg}
-                      alt={item.alt || "Banner"}
-                      width={1920}
-                      height={900}
-                      className="object-cover w-full h-auto md:mt-20 md:mb-16 lg:mt-40 lg:mb-10 xl:mt-0 xl:mb-2 2xl:mt-0 2xl:mb-0"
-                      priority={index === 0}
-                    />
+                    <div className="w-full aspect-1920/500">
+                      <Image
+                        src={item.desktopImg}
+                        alt={item.alt || "Banner"}
+                        fill
+                        className="object-cover"
+                        priority={index === 0}
+                      />
+                    </div>
                   </div>
 
+
                   {/* Mobile */}
-                  <div className="block mt-20 md:hidden">
+                  <div className="block md:hidden">
                     <Image
                       src={item.mobileImg}
                       alt={item.alt || "Banner"}

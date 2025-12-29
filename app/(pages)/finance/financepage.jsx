@@ -69,7 +69,7 @@ export default function FinancePage() {
             />
             <button
               onClick={calculateEMI}
-              className='px-6 py-2 text-white bg-blue-700 rounded-md hover:bg-blue-800'
+              className='px-6 py-2 text-white bg-[#283791]  rounded-md hover:bg-red-700'
             >
               Calculate EMI
             </button>

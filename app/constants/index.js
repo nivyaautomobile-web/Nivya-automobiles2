@@ -1551,7 +1551,7 @@ export const cars = [
     name: 'S-PRESSO',
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/spresso.webp?updatedAt=1762775002873',
-    price: '₹ 3.49* /-',
+    price: '₹ 3.49 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/S-Presso_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/spresso',
@@ -1560,7 +1560,7 @@ export const cars = [
     name: 'WAGONR',
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/wagnor.webp?updatedAt=1762775002796',
-    price: '₹ 4.98* /-',
+    price: '₹ 4.98 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/WagonR_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/wagonr',
@@ -1569,7 +1569,7 @@ export const cars = [
     name: 'ERTIGA',
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/ertiga.webp?updatedAt=1762775002557',
-    price: '₹ 8.80* /-',
+    price: '₹ 8.80 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/ErtigaBrochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/ertiga',
@@ -1578,7 +1578,7 @@ export const cars = [
     name: 'CELERIO',
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/celerio.webp?updatedAt=1762775002547',
-    price: '₹ 4.69* /-',
+    price: '₹ 4.69 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/Celerio_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/celerio',
@@ -1587,7 +1587,7 @@ export const cars = [
     name: 'EECO',
     image:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/Thumbnails(photos)/Eeco.webp?updatedAt=1762775002541',
-    price: '₹ 5.20* /-',
+    price: '₹ 5.20 L* /-',
     brochure:
       'https://ik.imagekit.io/hsukyjske/Nivya-automobiles/brochure/EECO_Brochure_Nivya_Automobiles_Anantapur.pdf',
     link: '/vehicles/eeco',

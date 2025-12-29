@@ -68,7 +68,7 @@ export default function CarGridClient({ cars }) {
           : cars.map((car, index) => (
             <div
               key={index}
-              className="overflow-hidden transition-all duration-300 border shadow-md group bg-[#e7e7e7] border-neutral-700 rounded-2xl hover:shadow-lg hover:border-neutral-500"
+              className="overflow-hidden transition-all duration-300 border shadow-md group bg-[#e7e7e7] border-neutral-700 rounded-2xl hover:shadow-xl hover:border-neutral-500 hover:scale-105 hover:duration-100"
             >
               {/* Top Bar */}
               <div className="flex items-center justify-between px-5 pt-4">
@@ -115,7 +115,7 @@ export default function CarGridClient({ cars }) {
 
                   <button
                     onClick={() => handleBookNow(car)}
-                    className="px-6 py-2 text-xs font-semibold text-black transition-all bg-white rounded-full hover:bg-gray-200"
+                    className="px-6 py-2 text-xs font-semibold text-white transition-all bg-[#283791] rounded-full hover:bg-red-700"
                   >
                     BOOK NOW
                   </button>

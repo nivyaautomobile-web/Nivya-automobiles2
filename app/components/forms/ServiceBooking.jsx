@@ -1,119 +1,139 @@
 'use client';
-import { useState } from 'react';
-import { toast } from 'react-hot-toast';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
-export default function ServiceForm() {
+export default function ServiceBooking() {
+
   const [formData, setFormData] = useState({
     name: '',
     number: '',
     message: '',
   });
-  const [loading, setLoading] = useState(false);
+
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Validation
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+
+    if (!formData.number.trim()) {
+      newErrors.number = "Mobile number is required";
+    } else if (!/^[6-9]\d{9}$/.test(formData.number)) {
+      newErrors.number = "Enter a valid 10-digit mobile number";
+    }
+
+    if (!formData.message.trim())
+      newErrors.message = "Message is required";
+
+    return newErrors;
+  };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setErrors(prev => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.number ) {
-      toast.error('Please fill in all required fields.');
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
       return;
     }
 
-    setLoading(true);
+    setIsSubmitting(true);
 
     try {
-      const res = await fetch('/api/service', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/service", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
+      if (!res.ok) throw new Error("Submit failed");
 
-      if (res.ok) {
-        toast.success(' Form submitted successfully!');
-        setFormData({ name: '', number: '', message: '' });
-      } else {
-        toast.error(data.error || '❌ Something went wrong.');
-      }
+      toast.success("✅ Submitted successfully!");
+      setFormData({ name: "", number: "", message: "" });
     } catch (err) {
       console.error(err);
-      toast.error('⚠️ Server error. Please try again later.');
+      toast.error("❌ Something went wrong. Please try again.");
     } finally {
-      setLoading(false);
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className='w-full max-w-full p-10 mx-auto text-black bg-white shadow-lg rounded-3xl'>
-      <h2 className='mb-8 text-3xl font-semibold text-center md:text-left'>
+    <div className="w-full max-w-full p-10 mx-auto bg-white shadow-lg rounded-3xl">
+      <h2 className="mb-8 text-3xl font-semibold text-center md:text-left">
         Book a Service Appointment
       </h2>
 
       <form
         onSubmit={handleSubmit}
-        className='grid items-start grid-cols-1 gap-6 md:grid-cols-2'
+        className="grid grid-cols-1 gap-6 md:grid-cols-2"
+        noValidate
       >
         {/* Name */}
-        <div className='flex flex-col space-y-2'>
-          <label className='text-sm text-black'>Name</label>
+        <div className="flex flex-col space-y-2">
+          <label className="text-sm">Name *</label>
           <input
-            type='text'
-            name='name'
+            type="text"
+            name="name"
             value={formData.name}
             onChange={handleChange}
-            className='py-2 text-black bg-transparent border-b border-gray-400 focus:border-black focus:outline-none'
+            className={`py-2 border-b outline-none ${errors.name ? "border-red-500" : "border-gray-400"
+              }`}
           />
+          {errors.name && <span className="text-xs text-red-500">{errors.name}</span>}
         </div>
 
         {/* Mobile Number */}
-        <div className='flex flex-col space-y-2'>
-          <label className='text-sm text-black'>Mobile Number</label>
+        <div className="flex flex-col space-y-2">
+          <label className="text-sm">Mobile Number *</label>
           <input
-            type='text'
-            name='number'
+            type="text"
+            name="number"
             maxLength={10}
-            minLength={10}
             value={formData.number}
             onChange={handleChange}
-            className='py-2 text-black bg-transparent border-b border-gray-400 focus:border-black focus:outline-none'
+            className={`py-2 border-b outline-none ${errors.number ? "border-red-500" : "border-gray-400"
+              }`}
           />
+          {errors.number && <span className="text-xs text-red-500">{errors.number}</span>}
         </div>
+
         {/* Message */}
-        <div className='flex flex-col space-y-2'>
-          <label className='text-sm text-black'>Message</label>
+        <div className="flex flex-col space-y-2 md:col-span-2">
+          <label className="text-sm">Message *</label>
           <textarea
-            name='message'
-            rows='1'
+            name="message"
+            rows="2"
             value={formData.message}
             onChange={handleChange}
-            className='py-2 text-black bg-transparent border-b border-gray-400 resize-none focus:border-black focus:outline-none'
+            className={`py-2 border-b outline-none resize-none ${errors.message ? "border-red-500" : "border-gray-400"
+              }`}
           ></textarea>
+          {errors.message && <span className="text-xs text-red-500">{errors.message}</span>}
         </div>
 
-        {/* Submit Button */}
-        <div className='flex justify-center mt-6 md:col-span-2 md:justify-end'>
+        {/* Submit */}
+        <div className="flex items-center">
           <button
-            type='submit'
-            disabled={loading}
-            className='px-8 py-2 font-semibold text-white transition-all bg-black rounded-full shadow-md hover:bg-gray-700 disabled:opacity-60'
+            type="submit"
+            disabled={isSubmitting}
+            className="px-8 py-2 font-semibold text-white transition-all bg-[#283791] rounded-full shadow-md hover:bg-red-700 disabled:opacity-60 "
           >
-            {loading ? 'Submitting...' : 'Submit'}
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
-        </div>
-      </form>
 
-      <p className='mt-6 text-xs text-center text-gray-400 md:text-left'>
-        <span className='font-semibold text-gray-300'>*</span> Disclaimer: By
-        clicking 'Submit', you have agreed to our{' '}
-        <a href='#' className='text-blue-400 underline hover:text-blue-500'>
-          Terms and Conditions
-        </a>
-        .
-      </p>
+        </div>
+
+      </form>
     </div>
   );
 }

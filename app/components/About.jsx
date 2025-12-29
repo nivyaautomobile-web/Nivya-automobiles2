@@ -48,7 +48,7 @@ export default function About() {
                   delivering unparalleled automotive experiences.
                 </p>
 
-                <button className="bg-[#0a0a1a] text-white px-8 py-4 font-medium rounded-sm hover:bg-[#1c1c2b] transition">
+                <button className="bg-[#283791]  text-white px-8 py-4 font-medium rounded-sm hover:bg-red-700 transition">
                   More About Us
                 </button>
               </>

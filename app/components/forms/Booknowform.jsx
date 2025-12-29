@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
-
+import { useRouter } from 'next/navigation';
 export default function BookNowForm({ open, setOpen, carName }) {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ export default function BookNowForm({ open, setOpen, carName }) {
     model: carName || '',
   });
   const [errors, setErrors] = useState({});
-
+ const router = useRouter(); 
   // Update model field when carName changes
   useEffect(() => {
     setFormData((prev) => ({ ...prev, model: carName }));
@@ -63,6 +63,7 @@ export default function BookNowForm({ open, setOpen, carName }) {
         toast.success(`✅ ${formData.model} booked successfully!`);
         setFormData({ name: '', number: '', model: carName }); // reset form
         setOpen(false);
+         router.push('/thank-you'); 
       } else {
         toast.error(`❌ Error: ${result.error || 'Submission failed'}`);
       }
@@ -109,9 +110,8 @@ export default function BookNowForm({ open, setOpen, carName }) {
               placeholder='Name'
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border-b focus:outline-none ${
-                errors.name ? 'border-red-500' : 'border-gray-400'
-              }`}
+              className={`w-full px-3 py-2 border-b focus:outline-none ${errors.name ? 'border-red-500' : 'border-gray-400'
+                }`}
             />
             {errors.name && (
               <p className='text-xs text-red-500'>{errors.name}</p>
@@ -127,9 +127,8 @@ export default function BookNowForm({ open, setOpen, carName }) {
               value={formData.number}
               onChange={handleChange}
               maxLength={10}
-              className={`w-full px-3 py-2 border-b focus:outline-none ${
-                errors.number ? 'border-red-500' : 'border-gray-400'
-              }`}
+              className={`w-full px-3 py-2 border-b focus:outline-none ${errors.number ? 'border-red-500' : 'border-gray-400'
+                }`}
             />
             {errors.number && (
               <p className='text-xs text-red-500'>{errors.number}</p>
@@ -149,9 +148,8 @@ export default function BookNowForm({ open, setOpen, carName }) {
             <button
               type='submit'
               disabled={loading}
-              className={`px-6 py-2 rounded-md font-medium text-white bg-black hover:bg-gray-800 ${
-                loading ? 'opacity-50 cursor-not-allowed' : ''
-              }`}
+              className={`px-6 py-2 rounded-md font-medium text-white bg-[#283791]  hover:bg-red-700 cursor-pointer ${loading ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
             >
               {loading ? 'Submitting...' : 'Submit'}
             </button>

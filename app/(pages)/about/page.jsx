@@ -3,9 +3,10 @@ import ResponsiveBanner from '@/app/components/ResponsiveBanner';
 import React from 'react';
 
 export const metadata = {
-  title: 'About Us | Nivya Automobiles',
+  title: 'About Nivya Automobiles | Trusted Maruti Suzuki Arena Dealer Anantapur',
   description:
-    'Learn more about Nivya Automobiles, your trusted Maruti Suzuki dealer in Hyderabad.',
+    'Nivya Automobiles is a trusted Maruti Suzuki Arena dealer in Anantapur offering new cars, used cars, service & customer-first experience.',
+  keywords: 'Nivya Automobiles Anantapur, Maruti Suzuki dealer Anantapur, Arena showroom Anantapur',
   openGraph: {
     title: 'Nivya Automobiles - Maruti Suzuki Dealer in Hyderabad',
     description:

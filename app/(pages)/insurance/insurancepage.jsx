@@ -83,7 +83,7 @@ export default function InsurancePage() {
           {/* Contact Card */}
           <div className='grid overflow-hidden bg-white shadow-xl rounded-3xl md:grid-cols-2'>
             {/* Left Info Section */}
-            <div className='flex flex-col justify-between p-10 text-white bg-[#725c14]'>
+            <div className='flex flex-col justify-between p-10 text-white bg-[#283791] '>
               <div>
                 <h3 className='mb-3 text-2xl font-semibold'>
                   Contact Information
@@ -187,7 +187,7 @@ export default function InsurancePage() {
                 <button
                   type='submit'
                   disabled={loading}
-                  className='px-8 py-3 text-white transition-all rounded-md shadow-md bg-[#725c14] hover:shadow-lg hover:opacity-90 disabled:opacity-60'
+                  className='px-8 py-3 text-white transition-all rounded-md shadow-md bg-[#283791]  hover:shadow-lg hover:opacity-90 disabled:opacity-60 hover:bg-red-700'
                 >
                   {loading ? 'Submitting...' : 'Send Message'}
                 </button>

@@ -27,10 +27,7 @@ export default function WhyChooseUs() {
               Your Premier Automotive Destination
             </h3>
             <p className="leading-relaxed text-gray-200">
-              Nivya Automobiles  stands as your premier destination for all your
-              automotive needs. With a rich legacy spanning 25 years and an
-              unwavering commitment to customer satisfaction, we've established
-              ourselves as leaders in the industry.
+              We are your trusted destination for all automotive needs, delivering excellence at every step. Backed by years of industry expertise and a customer-first approach, we combine quality vehicles, transparent processes, and personalized service to ensure a superior car-buying experience. Our commitment to reliability and satisfaction makes us a name you can confidently choose.
             </p>
           </div>
 
@@ -43,10 +40,7 @@ export default function WhyChooseUs() {
               Nationwide Accessibility
             </h3>
             <p className="leading-relaxed text-gray-200">
-              Our extensive network comprises 139 state-of-the-art facilities
-              across 32 cities in 12 states and union territories. This broad
-              reach guarantees you accessibility, timely service, and
-              competitive pricing.
+              With a strong presence across multiple cities and regions, we bring our services closer to you. Our extensive network ensures easy accessibility, faster support, and consistent service standards wherever you are. No matter the location, you can expect seamless assistance, competitive pricing, and timely delivery—nationwide.
             </p>
           </div>
 
@@ -59,10 +53,7 @@ export default function WhyChooseUs() {
               All-Inclusive Car Buying Solution
             </h3>
             <p className="leading-relaxed text-gray-200">
-              We offer an all-inclusive car buying experience that covers
-              everything you need. From insurance and financing to premium car
-              care products and accessories — we ensure a seamless ownership
-              journey.
+              From selecting the right car to driving it home with confidence, we take care of everything. Our end-to-end solutions include financing, insurance, documentation, accessories, and after-sales support—designed to give you a hassle-free ownership journey. With us, car buying is simple, transparent, and complete.
             </p>
           </div>
         </div>

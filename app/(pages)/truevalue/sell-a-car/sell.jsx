@@ -223,7 +223,7 @@ export default function TrueValueSell() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3 text-lg font-bold text-white bg-blue-800 sm:w-1/2 rounded-xl hover:bg-blue-700"
+                    className="w-full py-3 text-lg font-bold text-white bg-[#283791]  sm:w-1/2 rounded-xl hover:bg-red-700"
                   >
                     {loading ? "Submitting..." : "SUBMIT"}
                   </button>

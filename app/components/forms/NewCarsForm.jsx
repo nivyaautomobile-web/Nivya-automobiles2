@@ -91,7 +91,7 @@ export default function NewCarsForm() {
       </select>
       <button
         type='submit'
-        className='py-3 font-semibold text-white transition-all duration-300 bg-black rounded-lg hover:bg-gray-800'
+        className='py-3 font-semibold text-white transition-all duration-300 bg-[#283791] rounded-lg hover:bg-red-700'
       >
         Submit
       </button>

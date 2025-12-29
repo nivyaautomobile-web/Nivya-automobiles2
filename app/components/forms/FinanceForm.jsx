@@ -165,7 +165,7 @@ export default function FinanceForm() {
       <button
         type='submit'
         disabled={loading}
-        className='w-full px-6 py-2 mt-6 text-white bg-blue-700 rounded-md sm:w-auto hover:bg-blue-800 disabled:opacity-50'
+        className='w-full px-6 py-2 mt-6 text-white bg-[#283791]  rounded-md sm:w-auto hover:bg-red-700 disabled:opacity-50'
       >
         {loading ? 'Submitting...' : 'Get Your Car Loan Now'}
       </button>

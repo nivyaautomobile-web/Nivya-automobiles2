@@ -1,6 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
 
+
+
+export const metadata = {
+  title: 'Terms & Conditions | Nivya Maruti Suzuki',
+  description:
+    'Read the Terms & Conditions of Nivya Maruti Suzuki to understand the policies, usage guidelines, and responsibilities associated with accessing our website and services.',
+  keywords: [
+    'Nivya Maruti Suzuki terms and conditions',
+    'website terms',
+    'service policy',
+    'automobile dealership terms'
+  ],
+  openGraph: {
+    title: 'Terms & Conditions | Nivya Maruti Suzuki',
+    description:
+      'Review the Terms & Conditions governing the use of Nivya Maruti Suzuki’s website, services, and customer interactions.',
+    url: 'https://your-domain.com/terms-and-conditions',
+    siteName: 'Nivya Maruti Suzuki',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://your-domain.com/terms-and-conditions',
+  },
+};
 export default function TermsAndConditions() {
   return (
     <section className='min-h-screen py-16 bg-gray-50 mt-11'>

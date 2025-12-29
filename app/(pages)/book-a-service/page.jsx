@@ -1,11 +1,13 @@
 import ResponsiveBanner from '@/app/components/ResponsiveBanner';
 import ServiceFeatures from '@/app/components/ServiceFeatures';
-import ServiceForm from '@/app/components/forms/ServiceBooking';
+import ServiceBooking from '@/app/components/forms/ServiceBooking';
+
 
 export const metadata = {
-  title: 'Car Service | Nivya Automobiles',
+  title: 'Maruti Suzuki Service Center in Anantapur | Nivya Arena',
   description:
-    'Book your Maruti Suzuki car service in Hyderabad. Schedule regular maintenance, repairs, and quality checks at Nivya Automobiles.',
+    'Authorized Maruti Suzuki service center in Anantapur. Book service, genuine spare parts & expert technicians at Nivya Automobiles.',
+     keywords:'Maruti service center Anantapur, Arena service booking, Maruti car service',
   openGraph: {
     title: 'Car Service | Nivya Automobiles',
     description:
@@ -46,7 +48,7 @@ export default function ServicePage() {
           {/* Background Glow Effects */}
 
           <div className='absolute rounded-full bg-gradient-to-r from-[#bcac77] to-[#bc7501] bottom-10 right-10 w-72 h-72 opacity-20 blur-3xl'></div>
-<div className='z-10 w-full text-center'>
+          <div className='z-10 w-full text-center'>
             <h2 className='mb-10 text-3xl font-bold md:text-4xl'>
               Explore Our Services
             </h2>
@@ -56,10 +58,10 @@ export default function ServicePage() {
           </div>
           {/* Booking Form */}
           <div className='w-full max-w-full mt-8'>
-            <ServiceForm />
+            <ServiceBooking/>
           </div>
 
-          
+
         </section>
       </div>
     </>

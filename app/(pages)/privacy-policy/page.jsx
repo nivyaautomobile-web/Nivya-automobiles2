@@ -2,6 +2,29 @@
 import React from 'react';
 import Link from 'next/link';
 
+
+export const metadata = {
+  title: 'Privacy Policy | Nivya Maruti Suzuki',
+  description:
+    'Read the Privacy Policy of Nivya Maruti Suzuki to learn how we collect, use, protect, and safeguard your personal information when you use our website and services.',
+  keywords: [
+    'Nivya Maruti Suzuki privacy policy',
+    'data policy',
+    'customer privacy',
+    'automobile dealership privacy policy'
+  ],
+  openGraph: {
+    title: 'Privacy Policy | Nivya Maruti Suzuki',
+    description:
+      'Learn how Nivya Maruti Suzuki collects and protects your personal information in accordance with data security standards.',
+    url: 'https://www.nivyamaruti.com/privacy-policy',
+    siteName: 'Nivya Maruti Suzuki',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.nivyamaruti.com/privacy-policy',
+  },
+};
 export default function PrivacyPolicy() {
   return (
     <section className="min-h-screen py-16 mt-10 bg-gray-50">

@@ -213,7 +213,7 @@ export default function CareerPage() {
               <button
                 type='submit'
                 disabled={loading} // <-- disable when submitting
-                className={`px-8 py-3 font-semibold text-white transition bg-black rounded-md hover:bg-gray-800 ${
+                className={`px-8 py-3 font-semibold text-white transition bg-[#283791]  rounded-md hover:bg-red-700 ${
                   loading ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >

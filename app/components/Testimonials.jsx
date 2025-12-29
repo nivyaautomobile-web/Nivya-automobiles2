@@ -67,7 +67,7 @@ export default function Testimonials() {
                   uncivil respect. Always get adieus nature day course for common.
                 </p>
 
-                <button className="px-6 py-3 font-medium text-white transition-all duration-300 bg-black rounded-lg shadow-md hover:shadow-xl">
+                <button className="px-6 py-3 font-medium text-white transition-all duration-300 bg-[#283791] hover:bg-red-700  rounded-lg shadow-md hover:shadow-xl">
                   View More
                 </button>
               </>

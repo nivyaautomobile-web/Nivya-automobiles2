@@ -6,21 +6,21 @@ import CarListing from './components/CarListing';
 import Services from './components/service';
 import Testimonials from './components/Testimonials';
 export const metadata = {
-  title: 'Home | Nivya Automobiles',
+  title: 'Maruti Suzuki Arena in Anantapur | Nivya Automobiles – Best Car Offers 2025',
   description:
-    'Explore new and used Maruti Suzuki cars in Hyderabad with Nivya Automobiles. Find the best deals, offers, and services.',
+    'Buy new Maruti Suzuki Arena cars in Anantapur at Nivya Automobiles. Best year-end offers, on-road price, finance, insurance & test drive. Visit today!',
   keywords:
-    'Maruti Suzuki, new cars, used cars, Hyderabad, car deals, car service',
+    'Maruti Suzuki Arena Anantapur, Nivya Automobiles, Maruti showroom Anantapur, Maruti cars price Anantapur, Arena dealer near me',
   author: 'Nivya Automobiles',
   openGraph: {
     title: 'Nivya Automobiles | Maruti Suzuki Hyderabad',
     description:
       'Your trusted Maruti Suzuki dealer in Hyderabad. Buy new or used cars, book services, and explore accessories.',
-    url: 'https://www.nivyaautomobiles.com',
+    url: 'https://www.nivyamaruti.com',
     siteName: 'Nivya Automobiles',
     images: [
       {
-        url: 'https://www.nivyaautomobiles.com/images/home-banner.jpg',
+        url: 'https://www.nivyamaruti.com/images/home-banner.jpg',
         width: 1200,
         height: 630,
         alt: 'Nivya Automobiles Showroom',
