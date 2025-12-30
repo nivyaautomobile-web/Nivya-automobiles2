@@ -5,11 +5,15 @@ import toast from "react-hot-toast";
 export default function NumberPopup() {
   const [open, setOpen] = useState(false);
   const [number, setNumber] = useState("");
-  const [loading, setLoading] = useState(false);   // ✅ NEW
+  const [loading, setLoading] = useState(false);
+  const [successAnim, setSuccessAnim] = useState(false);
 
   useEffect(() => {
+    // 💾 Don't show popup again if number already saved
+    const saved = localStorage.getItem("popupNumberSaved");
     const alreadyShown = sessionStorage.getItem("popupShown");
-    if (alreadyShown) return;
+
+    if (saved || alreadyShown) return;
 
     const timer = setTimeout(() => {
       setOpen(true);
@@ -26,8 +30,7 @@ export default function NumberPopup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (loading) return; // avoid multiple clicks
+    if (loading) return;
 
     const phoneRegex = /^[6-9][0-9]{9}$/;
     if (!phoneRegex.test(number)) {
@@ -36,7 +39,8 @@ export default function NumberPopup() {
     }
 
     try {
-      setLoading(true);   // ⏳ show loading
+      setLoading(true);
+
       const res = await fetch("/api/popup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -46,14 +50,26 @@ export default function NumberPopup() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || "Failed to submit");
 
+      // 💾 Save so popup won't show next time
+      localStorage.setItem("popupNumberSaved", number);
+
       toast.success("Number submitted successfully!");
-      setNumber("");
-      setOpen(false);
+
+      // ✔ Play success animation
+      setSuccessAnim(true);
+
+      // 🕒 Delay closing popup
+      setTimeout(() => {
+        setOpen(false);
+        setSuccessAnim(false);
+        setNumber("");
+      }, 1200);
+
     } catch (err) {
       toast.error("Something went wrong. Please try again.");
-      console.log("Submit Error:", err);
+      console.log(err);
     } finally {
-      setLoading(false);  // ✅ reset button
+      setLoading(false);
     }
   };
 
@@ -62,6 +78,7 @@ export default function NumberPopup() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
       <div className="w-[90%] max-w-md bg-white rounded-2xl shadow-xl p-6 relative">
+
         <button
           onClick={() => setOpen(false)}
           className="absolute text-gray-500 top-3 right-3 hover:text-black"
@@ -86,16 +103,37 @@ export default function NumberPopup() {
             placeholder="Enter Mobile Number"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:border-blue-600"
             required
+            disabled={loading || successAnim}
           />
 
           <button
             type="submit"
-            disabled={loading}   // ⛔ disable when loading
-            className={`w-full py-3 mt-4 font-semibold text-white rounded-lg transition
-              ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#283791] hover:bg-red-700"}
+            disabled={loading || successAnim}
+            className={`w-full py-3 mt-4 font-semibold text-white rounded-lg flex items-center justify-center gap-2
+              transition-all duration-300
+              ${
+                successAnim
+                  ? "bg-green-600"
+                  : loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-[#283791] hover:bg-red-700"
+              }
             `}
           >
-            {loading ? "Submitting..." : "Submit"}   {/* ⏳ text change */}
+            {/* ⏳ Spinner */}
+            {loading && (
+              <span className="w-4 h-4 border-2 border-white rounded-full border-t-transparent animate-spin"></span>
+            )}
+
+            {/* ✔ Success Check */}
+            {successAnim && (
+              <span className="text-xl animate-bounce">✔</span>
+            )}
+
+            {/* Button Text */}
+            {!loading && !successAnim && "Submit"}
+            {loading && "Submitting..."}
+            {successAnim && "Submitted"}
           </button>
         </form>
       </div>
