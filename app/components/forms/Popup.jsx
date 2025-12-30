@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function NumberPopup() {
   const [open, setOpen] = useState(false);
@@ -17,18 +18,44 @@ export default function NumberPopup() {
     return () => clearTimeout(timer);
   }, []);
 
-  // 🔒 Disable background scroll when popup is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
   }, [open]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const phoneRegex = /^[6-9][0-9]{9}$/;
+    if (!phoneRegex.test(number)) {
+      toast.error("Enter a valid 10-digit mobile number starting with 6/7/8/9");
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/popup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ number: number }),   // ✅ send number
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.message || "Failed to submit");
+
+      toast.success("Number submitted successfully!");
+      setNumber("");       // ✅ reset input
+      setOpen(false);      // optional close popup
+    } catch (err) {
+      toast.error("Something went wrong. Please try again.");
+      console.log("Submit Error:", err);
+    }
+  };
 
   if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
       <div className="w-[90%] max-w-md bg-white rounded-2xl shadow-xl p-6 relative">
-
         <button
           onClick={() => setOpen(false)}
           className="absolute text-gray-500 top-3 right-3 hover:text-black"
@@ -37,29 +64,21 @@ export default function NumberPopup() {
         </button>
 
         <div className="flex flex-col items-center mb-3">
-          <img
-            src="/nivya_logo.png"
-            alt="Logo"
-            className="object-contain h-24 mb-2"
-          />
+          <img src="/nivya_logo.png" alt="Logo" className="object-contain h-24 mb-2" />
           <h2 className="text-xl font-bold text-gray-800">Stay Connected</h2>
           <p className="text-sm text-center text-gray-500">
             Enter your mobile number to get offers & updates
           </p>
         </div>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Number submitted: " + number);
-            setOpen(false);
-          }}
-        >
+        <form onSubmit={handleSubmit}>
           <input
             type="tel"
             maxLength={10}
             value={number}
-            onChange={(e) => setNumber(e.target.value)}
+            onChange={(e) =>
+              setNumber(e.target.value.replace(/\D/g, ""))
+            }
             placeholder="Enter Mobile Number"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:border-blue-600"
             required
@@ -72,7 +91,6 @@ export default function NumberPopup() {
             Submit
           </button>
         </form>
-
       </div>
     </div>
   );

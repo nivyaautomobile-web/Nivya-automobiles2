@@ -53,7 +53,7 @@ export default function PreOwnedForm() {
 
     try {
       setIsSubmitting(true);
-      const response = await fetch('/api/sell-a-car', {
+      const response = await fetch('/api/enquiries', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
