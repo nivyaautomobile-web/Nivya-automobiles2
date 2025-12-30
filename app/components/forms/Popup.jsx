@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 export default function NumberPopup() {
   const [open, setOpen] = useState(false);
   const [number, setNumber] = useState("");
+  const [loading, setLoading] = useState(false);   // ✅ NEW
 
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem("popupShown");
@@ -26,6 +27,8 @@ export default function NumberPopup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (loading) return; // avoid multiple clicks
+
     const phoneRegex = /^[6-9][0-9]{9}$/;
     if (!phoneRegex.test(number)) {
       toast.error("Enter a valid 10-digit mobile number starting with 6/7/8/9");
@@ -33,21 +36,24 @@ export default function NumberPopup() {
     }
 
     try {
+      setLoading(true);   // ⏳ show loading
       const res = await fetch("/api/popup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ number: number }),   // ✅ send number
+        body: JSON.stringify({ number }),
       });
 
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || "Failed to submit");
 
       toast.success("Number submitted successfully!");
-      setNumber("");       // ✅ reset input
-      setOpen(false);      // optional close popup
+      setNumber("");
+      setOpen(false);
     } catch (err) {
       toast.error("Something went wrong. Please try again.");
       console.log("Submit Error:", err);
+    } finally {
+      setLoading(false);  // ✅ reset button
     }
   };
 
@@ -76,9 +82,7 @@ export default function NumberPopup() {
             type="tel"
             maxLength={10}
             value={number}
-            onChange={(e) =>
-              setNumber(e.target.value.replace(/\D/g, ""))
-            }
+            onChange={(e) => setNumber(e.target.value.replace(/\D/g, ""))}
             placeholder="Enter Mobile Number"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:border-blue-600"
             required
@@ -86,9 +90,12 @@ export default function NumberPopup() {
 
           <button
             type="submit"
-            className="w-full py-3 mt-4 font-semibold text-white transition bg-[#283791] rounded-lg hover:bg-red-700"
+            disabled={loading}   // ⛔ disable when loading
+            className={`w-full py-3 mt-4 font-semibold text-white rounded-lg transition
+              ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#283791] hover:bg-red-700"}
+            `}
           >
-            Submit
+            {loading ? "Submitting..." : "Submit"}   {/* ⏳ text change */}
           </button>
         </form>
       </div>
