@@ -31,15 +31,15 @@ export default function CountdownTimer({ target }) {
   if (timeLeft === 0) return null;
 
   return (
-    <div className="fixed px-3 py-2 font-bold text-black bg-white shadow-2xl  z-9999 rounded-xl bottom-4 right-4 sm:bottom-6 sm:right-6 sm:px-4 sm:py-3">
+    <div className="fixed px-3 py-2 font-bold bg-gray-900 shadow-2xl z-9999 rounded-xl bottom-4 right-4 sm:bottom-6 sm:right-6 sm:px-4 sm:py-3 animate-bounce">
       {/* Title */}
-      <span className="block text-base sm:text-xl md:text-2xl">
-        New Year COUNTDOWN
+      <span className="block font-sans text-base text-red-600 capitalize sm:text-xl md:text-2xl">
+        NEW YEAR COUNTDOWN
       </span>
 
       {/* Time */}
-      <span className="block mt-1 text-3xl sm:text-5xl md:text-6xl lg:text-7xl ">
-        <span className="text-black">{hours}</span>:{minutes}:{seconds}
+      <span className="block mt-1 font-sans text-3xl text-yellow-300 sm:text-5xl md:text-6xl lg:text-7xl">
+        <span className="">{hours}</span>:{minutes}:{seconds}
       </span>
     </div>
   );
