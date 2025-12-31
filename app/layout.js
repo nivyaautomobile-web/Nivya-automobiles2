@@ -1,8 +1,10 @@
 import Script from 'next/script';
 import './globals.css';
+
 import LayoutWrapper from './LayoutWrapper';
 import ModalConf from './components/ModalConf';
-import NumberPopup from './components/forms/Popup';
+import CountdownTimer from './components/forms/test.jsx/CountdownTimer';
+import NewYearWrapper from './components/forms/test.jsx/NewYearWrapper';
 
 export const metadata = {
   title: 'Nivya Automobiles',
@@ -18,6 +20,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang='en'>
       <head>
@@ -48,7 +51,9 @@ export default function RootLayout({ children }) {
 
         <LayoutWrapper>
           <ModalConf />
-          <NumberPopup />
+          <CountdownTimer target='2025-12-31T23:59:00' />
+   <NewYearWrapper /> 
+          {/* <NumberPopup /> */}
           {children}
         </LayoutWrapper>
       </body>
