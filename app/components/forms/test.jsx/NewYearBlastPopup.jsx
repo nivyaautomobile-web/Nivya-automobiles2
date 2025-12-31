@@ -91,10 +91,10 @@ export default function NewYearMidnightBlast() {
 
   /* 🕛 Countdown to Midnight */
   useEffect(() => {
-    const target = new Date();
-    target.setHours(24, 0, 0, 0); // midnight today
+    // const target = new Date();
+    // target.setHours(24, 0, 0, 0); // midnight today
     // 🚀 TEST MODE — blast after 5 seconds
-    // const target = new Date(Date.now() + 2000);
+    const target = new Date(Date.now() + 1000);
 
     const tick = setInterval(() => {
       const now = new Date();
