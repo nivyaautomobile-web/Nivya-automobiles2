@@ -8,8 +8,11 @@ export default function NumberPopup() {
   const [loading, setLoading] = useState(false);
   const [successAnim, setSuccessAnim] = useState(false);
 
+  // ✅ Popup hidden on /admin pages
   useEffect(() => {
-    // 💾 Don't show popup again if number already saved
+    const isAdminPage = window.location.pathname.startsWith("/admin");
+    if (isAdminPage) return;
+
     const saved = localStorage.getItem("popupNumberSaved");
     const alreadyShown = sessionStorage.getItem("popupShown");
 
@@ -50,21 +53,17 @@ export default function NumberPopup() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || "Failed to submit");
 
-      // 💾 Save so popup won't show next time
       localStorage.setItem("popupNumberSaved", number);
 
       toast.success("Number submitted successfully!");
 
-      // ✔ Play success animation
       setSuccessAnim(true);
 
-      // 🕒 Delay closing popup
       setTimeout(() => {
         setOpen(false);
         setSuccessAnim(false);
         setNumber("");
       }, 1200);
-
     } catch (err) {
       toast.error("Something went wrong. Please try again.");
       console.log(err);
@@ -78,7 +77,6 @@ export default function NumberPopup() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
       <div className="w-[90%] max-w-md bg-white rounded-2xl shadow-xl p-6 relative">
-
         <button
           onClick={() => setOpen(false)}
           className="absolute text-gray-500 top-3 right-3 hover:text-black"
@@ -120,17 +118,10 @@ export default function NumberPopup() {
               }
             `}
           >
-            {/* ⏳ Spinner */}
             {loading && (
               <span className="w-4 h-4 border-2 border-white rounded-full border-t-transparent animate-spin"></span>
             )}
-
-            {/* ✔ Success Check */}
-            {successAnim && (
-              <span className="text-xl animate-bounce">✔</span>
-            )}
-
-            {/* Button Text */}
+            {successAnim && <span className="text-xl animate-bounce">✔</span>}
             {!loading && !successAnim && "Submit"}
             {loading && "Submitting..."}
             {successAnim && "Submitted"}
