@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { GiFireworkRocket } from "react-icons/gi";
 import { Lobster_Two } from "next/font/google";
 
 const lobster = Lobster_Two({

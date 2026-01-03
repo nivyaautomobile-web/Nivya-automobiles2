@@ -5,6 +5,7 @@ import LayoutWrapper from './LayoutWrapper';
 import ModalConf from './components/ModalConf';
 import CountdownTimer from './components/forms/test.jsx/CountdownTimer';
 import NewYearWrapper from './components/forms/test.jsx/NewYearWrapper';
+import NumberPopup from './components/forms/Popup';
 
 export const metadata = {
   title: 'Nivya Automobiles',
@@ -52,8 +53,8 @@ export default function RootLayout({ children }) {
         <LayoutWrapper>
           <ModalConf />
           <CountdownTimer target='2025-12-31T23:59:00' />
-   <NewYearWrapper /> 
-          {/* <NumberPopup /> */}
+   {/* <NewYearWrapper />  */}
+          <NumberPopup />
           {children}
         </LayoutWrapper>
       </body>
