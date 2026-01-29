@@ -13,24 +13,35 @@ import { useEffect, useState } from 'react';
 export default function Testimonials() {
   const [loading, setLoading] = useState(true);
 
-  const testimonials = [
-    {
-      name: 'Mehwish',
-      text: 'Compliment interested discretion estimating on stimulated apartments oh.',
-      image: '/testimonials/t1.jpg',
-    },
-    {
-      name: 'Elizabeth Jeff',
-      text: 'Dear so sing when in find read of call. As distrusts behaviour abilities defective is.',
-      image: '/testimonials/t2.jpg',
-      active: true,
-    },
-    {
-      name: 'Emily Thomas',
-      text: 'Never at water me might. On formed merits hunted merely by mr whence or.',
-      image: '/testimonials/t3.jpg',
-    },
-  ];
+const testimonials = [
+  {
+    name: "Ramesh Kumar",
+    text: "Excellent experience at Nivya Automobiles, Anantapur. The sales team was very polite and explained all Maruti Suzuki models clearly. Smooth booking and timely delivery of my car.",
+    image: "/testimonials/t1.jpg",
+  },
+  {
+    name: "Sowmya Reddy",
+    text: "Very happy with the service at Maruti Suzuki ARENA, Shilparamam. Staff is friendly, showroom ambience is good, and the documentation process was quick and transparent.",
+    image: "/testimonials/t2.jpg",
+    active: true,
+  },
+  {
+    name: "Venkatesh Naidu",
+    text: "Had a great car buying experience. Test drive was arranged without delay and all my questions were answered patiently. Highly recommend Nivya Automobiles in Anantapur.",
+    image: "/testimonials/t3.jpg",
+  },
+  {
+    name: "Lakshmi Devi",
+    text: "From enquiry to delivery, everything was handled professionally. Good follow-up, fair pricing, and excellent customer support. Truly satisfied with Maruti Suzuki ARENA.",
+    image: "/testimonials/t4.jpg",
+  },
+  {
+    name: "Srinivas Rao",
+    text: "Best Maruti Suzuki showroom in Anantapur. Helpful executives, clean showroom, and hassle-free buying experience. Would definitely suggest this place to friends and family.",
+    image: "/testimonials/t5.jpg",
+  },
+];
+
 
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 1200);
