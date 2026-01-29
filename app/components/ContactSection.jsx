@@ -93,10 +93,10 @@ export default function Contact() {
                       </h3>
                       <p className="mt-2 text-gray-500">
                         <a
-                          href="tel:+9175876 66999"
+                          href="tel:+919977499499"
                           className="font-medium hover:text-blue-600"
                         >
-                         +91 75876 66999
+                         +91 9977499499
                         </a>
                       </p>
                     </div>
