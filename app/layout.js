@@ -1,6 +1,5 @@
 import Script from 'next/script';
 import './globals.css';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import LayoutWrapper from './LayoutWrapper';
 import ModalConf from './components/ModalConf';
 import CountdownTimer from './components/forms/test.jsx/CountdownTimer';
@@ -49,7 +48,7 @@ export default function RootLayout({ children }) {
             gtag('config', '');
           `}
         </script>
-          <GoogleAnalytics gaId='G-LP6Q5Z2HK2' />
+         
       </head>
 
       <body>
