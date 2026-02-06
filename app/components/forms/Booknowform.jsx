@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 export default function BookNowForm({ open, setOpen, carName }) {
   const [loading, setLoading] = useState(false);
@@ -10,7 +11,7 @@ export default function BookNowForm({ open, setOpen, carName }) {
     model: carName || '',
   });
   const [errors, setErrors] = useState({});
- const router = useRouter(); 
+  const router = useRouter();
   // Update model field when carName changes
   useEffect(() => {
     setFormData((prev) => ({ ...prev, model: carName }));
@@ -63,7 +64,7 @@ export default function BookNowForm({ open, setOpen, carName }) {
         toast.success(`✅ ${formData.model} booked successfully!`);
         setFormData({ name: '', number: '', model: carName }); // reset form
         setOpen(false);
-         router.push('/thank-you'); 
+        router.push('/thank-you');
       } else {
         toast.error(`❌ Error: ${result.error || 'Submission failed'}`);
       }
@@ -156,9 +157,20 @@ export default function BookNowForm({ open, setOpen, carName }) {
           </div>
         </form>
 
-        <p className='mt-3 text-xs text-center text-gray-500'>
-          *By clicking 'Submit', you agree to our Terms & Conditions.
+       <p className="text-xs leading-relaxed text-gray-500 ">
+          *By clicking <span className="font-semibold text-gray-700">Submit</span>, I agree to the{" "}
+          <Link href='/terms-and-conditions' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Terms & Conditions
+          </Link>
+          and
+          <Link href='/privacy-policy' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Privacy Policy
+          </Link>{" "}
+          and I give my consent to receive updates via{" "}
+          <span className="font-medium text-gray-700">SMS</span> /{" "}
+          <span className="font-medium text-gray-700">Email</span>.
         </p>
+
       </div>
     </div>
   );

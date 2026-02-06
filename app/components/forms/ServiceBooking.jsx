@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-
+import Link from 'next/link';
 export default function ServiceBooking() {
 
   const [formData, setFormData] = useState({
@@ -120,6 +120,7 @@ export default function ServiceBooking() {
           ></textarea>
           {errors.message && <span className="text-xs text-red-500">{errors.message}</span>}
         </div>
+      
 
         {/* Submit */}
         <div className="flex items-center">
@@ -132,6 +133,19 @@ export default function ServiceBooking() {
           </button>
 
         </div>
+<p className="text-xs leading-relaxed text-gray-500 ">
+          *By clicking <span className="font-semibold text-gray-700">Submit</span>, I agree to the{" "}
+          <Link href='/terms-and-conditions' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Terms & Conditions
+          </Link>
+          and
+          <Link href='/privacy-policy' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Privacy Policy
+          </Link>{" "}
+          and I give my consent to receive updates via{" "}
+          <span className="font-medium text-gray-700">SMS</span> /{" "}
+          <span className="font-medium text-gray-700">Email</span>.
+        </p>
 
       </form>
     </div>

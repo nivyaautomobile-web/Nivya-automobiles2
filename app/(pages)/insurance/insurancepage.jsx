@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import ResponsiveBanner from '@/app/components/ResponsiveBanner';
-
+import Link from 'next/link';
 export default function InsurancePage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -183,6 +183,19 @@ export default function InsurancePage() {
                     className='w-full px-3 py-3 transition-all border border-gray-200 rounded-md resize-none focus:ring-2 focus:ring-teal-500 focus:outline-none'
                   ></textarea>
                 </div>
+                <p className="text-xs leading-relaxed text-gray-500 ">
+                  *By clicking <span className="font-semibold text-gray-700">Submit</span>, I agree to the{" "}
+                  <Link href='/terms-and-conditions' className="text-blue-600 cursor-pointer hover:text-blue-700">
+                    Terms & Conditions
+                  </Link>
+                  and
+                  <Link href='/privacy-policy' className="text-blue-600 cursor-pointer hover:text-blue-700">
+                    Privacy Policy
+                  </Link>{" "}
+                  and I give my consent to receive updates via{" "}
+                  <span className="font-medium text-gray-700">SMS</span> /{" "}
+                  <span className="font-medium text-gray-700">Email</span>.
+                </p>
 
                 <button
                   type='submit'

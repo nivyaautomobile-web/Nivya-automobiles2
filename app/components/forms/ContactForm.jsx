@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-
+import Link from 'next/link';
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -128,17 +128,30 @@ export default function ContactForm() {
           onChange={handleChange}
           className='w-full p-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500'
           required
-        ></textarea>
+        ></textarea>   <p className="text-xs leading-relaxed text-gray-500 ">
+          *By clicking <span className="font-semibold text-gray-700">Submit</span>, I agree to the{" "}
+          <Link href='/terms-and-conditions' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Terms & Conditions
+          </Link>
+          and
+          <Link href='/privacy-policy' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Privacy Policy
+          </Link>{" "}
+          and I give my consent to receive updates via{" "}
+          <span className="font-medium text-gray-700">SMS</span> /{" "}
+          <span className="font-medium text-gray-700">Email</span>.
+        </p>
+
         <button
           type='submit'
           disabled={loading}
-          className={`px-6 py-3 font-semibold text-white transition bg-[#283791]   rounded-lg shadow-md hover:bg-red-700 ${
-            loading ? 'opacity-60 cursor-not-allowed' : ''
-          }`}
+          className={`px-6 py-3 font-semibold text-white transition bg-[#283791]   rounded-lg shadow-md hover:bg-red-700 ${loading ? 'opacity-60 cursor-not-allowed' : ''
+            }`}
         >
           {loading ? 'Sending...' : 'Send Message'}
         </button>
       </form>
+
     </div>
   );
 }

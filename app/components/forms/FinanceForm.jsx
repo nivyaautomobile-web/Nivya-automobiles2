@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-
+import Link from 'next/link';
 export default function FinanceForm() {
   const [form, setForm] = useState({
     name: '',
@@ -161,6 +161,19 @@ export default function FinanceForm() {
           className='w-full p-2 border rounded-md'
         />
       </div>
+      <p className="mt-3 text-xs leading-relaxed text-gray-500 ">
+        *By clicking <span className="font-semibold text-gray-700">Submit</span>, I agree to the{" "}
+        <Link href='/terms-and-conditions' className="text-blue-600 cursor-pointer hover:text-blue-700">
+          Terms & Conditions
+        </Link>
+        and
+        <Link href='/privacy-policy' className="text-blue-600 cursor-pointer hover:text-blue-700">
+          Privacy Policy
+        </Link>{" "}
+        and I give my consent to receive updates via{" "}
+        <span className="font-medium text-gray-700">SMS</span> /{" "}
+        <span className="font-medium text-gray-700">Email</span>.
+      </p>
 
       <button
         type='submit'

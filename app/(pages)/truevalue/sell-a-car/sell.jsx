@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import ResponsiveBanner from "@/app/components/ResponsiveBanner";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
+import Link from "next/link";
 export default function TrueValueSell() {
   const [openIndex, setOpenIndex] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -208,9 +208,20 @@ export default function TrueValueSell() {
                     onChange={handleChange}
                     className="w-5 h-5"
                   />
-                  <label className="text-sm text-gray-600">
-                    I authorize Maruti Suzuki India Ltd. to contact me.
-                  </label>
+                  <p className="text-xs leading-relaxed text-gray-500 ">
+          *By clicking <span className="font-semibold text-gray-700">Submit</span>, I agree to the{" "}
+          <Link href='/terms-and-conditions' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Terms & Conditions
+          </Link>
+          and
+          <Link href='/privacy-policy' className="text-blue-600 cursor-pointer hover:text-blue-700">
+            Privacy Policy
+          </Link>{" "}
+          and I give my consent to receive updates via{" "}
+          <span className="font-medium text-gray-700">SMS</span> /{" "}
+          <span className="font-medium text-gray-700">Email</span>.
+        </p>
+
                 </div>
                 {errors.authorize && (
                   <p className="text-sm text-red-500 sm:col-span-3">
