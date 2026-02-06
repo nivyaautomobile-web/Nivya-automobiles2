@@ -67,8 +67,8 @@ export default function RootLayout({ children }) {
         </noscript>
 
         <LayoutWrapper>
-          <ModalConf />
-          <CountdownTimer target='2025-12-31T23:59:00' />
+          {/* <ModalConf /> */}
+          {/* <CountdownTimer target='2025-12-31T23:59:00' /> */}
           {/* <NewYearWrapper />  */}
           <NumberPopup />
           {children}
