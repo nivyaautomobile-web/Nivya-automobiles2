@@ -23,6 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
+        <meta
+          name='google-site-verification'
+          content='SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw'
+        />
         {/* Google Tag Manager */}
         <Script id='gtm-script' strategy='afterInteractive'>
           {`
@@ -36,19 +40,19 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         {/* <!-- Google tag (gtag.js) --> */}
-        <script
+        <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=G-LP6Q5Z2HK2'
           strategy='afterInteractive'
         />
-        <script id='ga4-script' strategy='afterInteractive'>
+        <Script id='ga4-script' strategy='afterInteractive'>
            
           {` window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-LP6Q5Z2HK2');`}
-        </script>
+        </Script>
       </head>
 
       <body>
