@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <head>
         {/* Google Tag Manager */}
-        {/* <Script id='gtm-script' strategy='afterInteractive'>
+        <Script id='gtm-script' strategy='afterInteractive'>
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];
             w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-M6KJ9FF2');
           `}
-        </Script> */}
+        </Script>
         {/* <!-- Google tag (gtag.js) --> */}
         <script
           async
@@ -53,14 +53,14 @@ export default function RootLayout({ children }) {
 
       <body>
         {/* Google Tag Manager (noscript) */}
-        {/* <noscript>
+        <noscript>
           <iframe
             src='https://www.googletagmanager.com/ns.html?id=GTM-M6KJ9FF2'
             height='0'
             width='0'
             style={{ display: 'none', visibility: 'hidden' }}
           />
-        </noscript> */}
+        </noscript>
 
         <LayoutWrapper>
           <ModalConf />
