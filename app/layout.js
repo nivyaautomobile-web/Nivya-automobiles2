@@ -36,19 +36,19 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-M6KJ9FF2');
           `}
         </Script>
-        
+
         <Script
           src='https://www.googletagmanager.com/gtag/js?id=G-LP6Q5Z2HK2'
           strategy='afterInteractive'
         />
-        <Script id='ga4-init' strategy='afterInteractive'>
+        <script id='ga4-init' strategy='afterInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-LP6Q5Z2HK2');
           `}
-        </Script>
+        </script>
       </head>
 
       <body>
