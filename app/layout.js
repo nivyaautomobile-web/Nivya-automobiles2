@@ -15,13 +15,12 @@ export const metadata = {
     google: 'SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [{ url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }],
     apple: '/apple-touch-icon.png',
   },
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang='en'>
       <head>
@@ -53,7 +52,7 @@ export default function RootLayout({ children }) {
         <LayoutWrapper>
           <ModalConf />
           <CountdownTimer target='2025-12-31T23:59:00' />
-   {/* <NewYearWrapper />  */}
+          {/* <NewYearWrapper />  */}
           <NumberPopup />
           {children}
         </LayoutWrapper>
