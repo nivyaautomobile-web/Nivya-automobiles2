@@ -59,7 +59,7 @@ export default function About() {
               <Skeleton height={350} width={"100%"} className="rounded-lg" />
             ) : (
               <div className="w-full overflow-hidden rounded-lg shadow-md">
-                <img src="/images/showroom.jpeg" />
+                <img src="/images/About_us.jpeg" />
 
               </div>
             )}
