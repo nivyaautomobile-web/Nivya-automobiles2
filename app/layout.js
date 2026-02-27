@@ -27,6 +27,20 @@ export default function RootLayout({ children }) {
           name='google-site-verification'
           content='SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw'
         />
+
+        {/* Google Ads Global Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17961039664"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17961039664');
+          `}
+        </Script>
         {/* Google Tag Manager */}
         <Script id='gtm-script' strategy='afterInteractive'>
           {`
@@ -46,7 +60,7 @@ export default function RootLayout({ children }) {
           strategy='afterInteractive'
         />
         <Script id='ga4-script' strategy='afterInteractive'>
-           
+
           {` window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
