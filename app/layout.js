@@ -26,8 +26,24 @@ export default function RootLayout({ children }) {
         <meta
           name='google-site-verification'
           content='SqUUPnh17HPH2EXh3vAwJlyUgO3Hak6wy_ywVW6CzDw'
+
         />
 
+        {/* <!-- Event snippet for Add to cart conversion page --> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17961039664"
+          strategy="afterInteractive"
+        />
+
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17961039664"></Script>
+        <Script id="google-tag" strategy="afterInteractive">
+          {` window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-17961039664');`}
+        </Script>
         {/* Google Ads Global Tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17961039664"
