@@ -111,7 +111,7 @@ export default function Contact() {
                     >
                       <Skeleton height={40} width={40} circle />
                       <Skeleton height={20} width={120} className="mt-4" />
-                      <Skeleton height={15} className="mt-2" count={2} />
+                      {/* <Skeleton height={15} className="mt-2" count={2} /> */}
                     </div>
                   ) : null
                 )}
@@ -215,13 +215,13 @@ export default function Contact() {
 
                       <p>🏢 Showroom</p>
 
-                      <a
+                      {/* <a
                         href={outlet.direction}
                         target="_blank"
                         className="inline-block font-medium text-blue-600 hover:underline"
                       >
                         ➜ Get Directions
-                      </a>
+                      </a> */}
 
                     </div>
                   </div>
