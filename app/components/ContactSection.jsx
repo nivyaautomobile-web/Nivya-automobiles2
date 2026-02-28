@@ -14,7 +14,53 @@ import {
 import ContactForm from './forms/ContactForm';
 import ResponsiveBanner from './ResponsiveBanner';
 
+
 export default function Contact() {
+
+  const outlets = [
+    {
+      name: "Nivya Automobiles – Anantapur",
+      address: "Near Shilparamam, Anantapur, Andhra Pradesh – 515001",
+      phone: "+919977499499",
+      email: "nivya.atp.sm@marutidealers.com",
+      map: "https://www.google.com/maps?q=Maruti+Suzuki+ARENA+Nivya+Automobiles+Anantapur+Shilparamam&output=embed",
+      direction:
+        "https://www.google.com/maps/search/?api=1&query=Maruti+Suzuki+ARENA+Nivya+Automobiles+Anantapur",
+    },
+    {
+      name: "Nivya Automobiles – Gooty",
+      address:
+        "Revenue Ward No-7, Near Dhanvi Honda, Maruti Nagar, Gooty – 515401",
+      phone: "+918977747199",
+      email: "nivya.atp.sm@marutidealers.com",
+      map: "https://www.google.com/maps?q=Maruti+Suzuki+ARENA+Gooty+Maruti+nagar&output=embed",
+      direction:
+        "https://www.google.com/maps/search/?api=1&query=Maruti+Suzuki+ARENA+Gooty",
+    },
+    {
+      name: "Nivya Automobiles – Kottacheruvu",
+      address:
+        "Near MRO Office, Dharmavaram Road, Kottacheruvu – 515133",
+      phone: "+918977747198",
+      email: "nivya.atp.sm@marutidealers.com",
+      map: "https://www.google.com/maps?q=Maruti+Suzuki+ARENA+Kottacheruvu&output=embed",
+      direction:
+        "https://www.google.com/maps/search/?api=1&query=Maruti+Suzuki+ARENA+Kottacheruvu",
+    },
+    {
+      name: "Nivya Automobiles – Kadiri",
+      address:
+        "Kadiri Main Road, Near Sri Balaji Traders, Kadiri – 515591",
+      phone: "+918977747192",
+      email: "nivya.atp.sm@marutidealers.com",
+      map: "https://www.google.com/maps?q=Maruti+Suzuki+ARENA+Kadiri&output=embed",
+      direction:
+        "https://www.google.com/maps/search/?api=1&query=Maruti+Suzuki+ARENA+Kadiri",
+    },
+  ];
+
+
+
   const [loading, setLoading] = useState(true);
 
   // Smooth shimmer loading
@@ -56,7 +102,7 @@ export default function Contact() {
                 </h2>
               )}
 
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-3">
                 {[1, 2, 3, 4].map((_, i) =>
                   loading ? (
                     <div
@@ -72,19 +118,6 @@ export default function Contact() {
 
                 {!loading && (
                   <>
-                    {/* Location */}
-                    <div className="flex flex-col items-center justify-center p-8 bg-white shadow-md rounded-2xl hover:shadow-lg">
-                      <FaMapMarkerAlt className="mb-4 text-4xl text-[#b97200]" />
-                      <h3 className="text-lg font-semibold text-gray-800">
-                        Location
-                      </h3>
-                      <p className="mt-2 leading-relaxed text-gray-500">
-                        Maruti Suzuki ARENA
-                        <br />
-                        (Nivya Automobiles, Anantapur, Shilparamam)
-                      </p>
-                    </div>
-
                     {/* Phone */}
                     <div className="flex flex-col items-center justify-center p-8 bg-white shadow-md rounded-2xl hover:shadow-lg">
                       <FaPhoneAlt className="mb-4 text-4xl text-[#b97200]" />
@@ -96,7 +129,7 @@ export default function Contact() {
                           href="tel:+919977499499"
                           className="font-medium hover:text-blue-600"
                         >
-                         +91 9977499499
+                          +91 9977499499
                         </a>
                       </p>
                     </div>
@@ -112,7 +145,7 @@ export default function Contact() {
                           href="mailto:nivya.atp.sm@marutidealers.com"
                           className="font-medium hover:text-blue-600"
                         >
-                        nivya.atp.sm@marutidealers.com
+                          nivya.atp.sm@marutidealers.com
                         </a>
                       </p>
                     </div>
@@ -134,6 +167,69 @@ export default function Contact() {
             </div>
           </section>
 
+          <section className="py-16 bg-gray-100">
+            <div className="px-6 mx-auto max-w-7xl">
+
+              <h2 className="mb-12 text-4xl font-semibold text-center text-gray-800">
+                Showroom Outlets
+              </h2>
+
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+                {/* Outlet Card */}
+                {outlets.map((outlet, index) => (<div key={index} className="overflow-hidden transition bg-white shadow-md rounded-xl hover:shadow-xl">
+
+                  {/* Map */}
+                  {/* <iframe
+                    src={outlet.map}
+                    height="200"
+                    className="w-full border-0"
+                    loading="lazy"
+                  ></iframe> */}
+
+                  {/* Details */}
+                  <div className="p-6">
+                    <h3 className="mb-3 text-xl font-semibold text-gray-800">
+                      {outlet.name}
+                    </h3>
+
+                    <p className="mb-4 text-sm leading-relaxed text-gray-600">
+                      {outlet.address}
+                    </p>
+
+                    <div className="space-y-2 text-sm text-gray-700">
+
+                      <p>
+                        📞
+                        <a href={`tel:${outlet.phone}`} className="ml-2 hover:text-blue-600">
+                          {outlet.phone}
+                        </a>
+                      </p>
+
+                      <p>
+                        ✉️
+                        <a href={`mailto:${outlet.email}`} className="ml-2 hover:text-blue-600">
+                          {outlet.email}
+                        </a>
+                      </p>
+
+                      <p>🏢 Showroom</p>
+
+                      <a
+                        href={outlet.direction}
+                        target="_blank"
+                        className="inline-block font-medium text-blue-600 hover:underline"
+                      >
+                        ➜ Get Directions
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+                ))}
+              </div>
+            </div>
+          </section>
           {/* ---------------------------------------------------
               CONTACT FORM + MAP (Skeleton Added)
           ---------------------------------------------------- */}

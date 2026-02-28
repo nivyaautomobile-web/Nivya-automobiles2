@@ -135,7 +135,7 @@ export default function Footer() {
                 height={60}
               />
               <p className="mt-2 text-xs">
-                © 2025 Nivya Automobiles. All Rights Reserved.
+                ©{ new Date().getFullYear()} Nivya Automobiles. All Rights Reserved.
               </p>
             </div>
 
