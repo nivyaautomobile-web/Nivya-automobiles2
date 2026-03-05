@@ -206,12 +206,12 @@ export default function Contact() {
                         </a>
                       </p>
 
-                      <p>
+                      {/* <p>
                         ✉️
                         <a href={`mailto:${outlet.email}`} className="ml-2 hover:text-blue-600">
                           {outlet.email}
                         </a>
-                      </p>
+                      </p> */}
 
                       <p>🏢 Showroom</p>
 
